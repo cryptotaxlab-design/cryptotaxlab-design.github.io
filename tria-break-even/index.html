@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triaカードは元が取れるのか？年間利用額から損益分岐を計算する【2026年8月版】</title>
+<meta name="description" content="クリプトカードは結局得なのか。雑所得課税・年会費・実測した実効手数料1.444%まで差し引いた手取りを、年間利用額と課税所得から計算できるシミュレーター。黒字はしきい値ではなく範囲で、税率43%のSignatureなら年152万〜234万円。月額上限を超えると使うほど損が増える。Virtualはどの税率でも黒字にならない。デメリットと向かない人の条件も明示。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://cryptotaxlab-design.github.io/tria-break-even/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cryptotaxlab-design.github.io/tria-break-even/">
+<meta property="og:title" content="Triaカードは元が取れるのか？年間利用額から損益分岐を計算する">
+<meta property="og:description" content="税・年会費・実測手数料まで引いた手取りを計算。損益分岐はSignatureで年約152万円、Premiumで年約198万円。">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Triaカードは元が取れるのか？年間利用額から損益分岐を計算する",
+      "description": "還元率・雑所得課税・年会費・実測した実効手数料をすべて差し引いた手取りを計算し、損益分岐点を示すシミュレーター。",
+      "inLanguage": "ja",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "author": { "@type": "Person", "name": "運営者" },
+      "publisher": { "@type": "Organization", "name": "クリプトカード税務ラボ" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Triaカードは結局、元が取れますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "年間利用額によりますが、黒字になるのは「しきい値以上」ではなく「一定の範囲内」です。課税所得900万円超（税率43%）の場合、黒字になるのはSignatureで年152万円から234万円、Premiumで年198万円から778万円の範囲です。下限を下回ると年会費を回収できず赤字、上限を超えると月額上限を超えた分の還元率が1%まで落ちるため、使うほど損が増えて再び赤字になります。年間100万円の利用では、Virtualで−14,436円、Signatureで−5,871円、Premiumで−19,418円と、どのプランでも赤字でした。最も条件の良い金額をぴったり狙っても、Signature・税率43%で年3,993円が上限です。税率が低い人ほど範囲は広がり、Virtualはどの税率でも黒字になりません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "クリプトカードのデメリットは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "主なデメリットは5つです。第一に、決済のたびに暗号資産の譲渡として課税イベントが発生し、原則として雑所得になるため、決済回数分の損益計算が必要になります。第二に、キャッシュバックも課税対象となり得るため、表示還元率がそのまま手取りにはなりません。第三に、為替手数料が為替レートに内包されており、明細の手数料欄を見ても実際のコストが分かりません。実測では市場レート基準で1.444%でした。第四に、還元率には月額上限があり、上限を超えた分は1%程度まで下がります。第五に、キャッシュバックの受け取りに最大90日かかり、支払いは四半期ごとです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "年会費の高いプランを選んだ方が得ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "利用額が少ないなら逆効果です。年会費は固定費なので、利用額が小さいほど1円あたりの負担が重くなります。年間100万円の利用では、年会費250ドルのPremium（−19,418円）が、年会費109ドルのSignature（−5,871円）より損をします。還元率6%という数字だけで最上位プランを選ぶと、かえって赤字が拡大します。損益分岐点もPremiumの方が高く、年約198万円の利用が必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "課税所得が高い人ほど不利というのは本当ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "本当です。直感に反しますが、構造上そうなります。キャッシュバックは雑所得として総合課税されるため税率が高いほど目減りしますが、実効手数料1.444%は税率と無関係に出ていきます。したがって高所得者ほど手取りが減り、黒字になる範囲は狭くなります。Signatureの場合、税率20%なら年79万円から552万円の範囲で黒字ですが、税率43%では年152万円から234万円まで狭まり、税率50%では黒字になる金額が存在しなくなります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "普通のクレジットカードと比べてどうですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "単純な損得なら普通のクレジットカードが勝ちます。日本のクレジットカードのポイント還元は値引きとして扱われ課税対象外とされるのが通例のため、還元率1%のカードなら年間100万円の利用で1万円が非課税で残ります。ただし比較対象を間違えないでください。すでに暗号資産を保有していてそれを使いたい場合、代替手段は国内取引所での売却であり、その売却自体も課税イベントで、送金と着金の手間も発生します。現実の選択は「クリプトカード対一般クレカ」ではなく「クリプトカード対 取引所で売却してから使う」であり、この比較なら利便性の差で価値が出ます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どういう人なら使う価値がありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "すでに暗号資産を保有していて、それを国内取引所での売却を経ずに使いたい人です。そのうえで年間150万円前後以上をこのカードに集中させられること、損益計算ツールを既に使っていて記録の追加負担が小さいこと、月額上限の範囲に利用額が収まることが条件になります。逆に、確定申告を自分でやりたくない人、年間利用額が100万円程度以下の人、少額決済を日常的に多数行う人には向きません。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#ffffff; --fg:#16181d; --muted:#5c6370; --line:#e3e6ec;
+  --card:#f7f8fa; --accent:#0b6bcb; --accent-fg:#ffffff;
+  --warn-bg:#fff8e1; --warn-line:#e6c200; --warn-fg:#5c4a00;
+  --ok-bg:#eef7ee; --ok-line:#3f9142; --ok-fg:#1d5b21;
+  --bad-bg:#fdeeee; --bad-line:#d64545; --bad-fg:#8a1f1f;
+  --maxw:820px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1216; --fg:#e6e8ec; --muted:#9aa3b2; --line:#262b33;
+    --card:#161a20; --accent:#4d9dff; --accent-fg:#0b1017;
+    --warn-bg:#2a2412; --warn-line:#8a7420; --warn-fg:#f0dfa0;
+    --ok-bg:#13241a; --ok-line:#3f9142; --ok-fg:#8fdc97;
+    --bad-bg:#2a1414; --bad-line:#c25555; --bad-fg:#ffb4b4;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1216; --fg:#e6e8ec; --muted:#9aa3b2; --line:#262b33;
+  --card:#161a20; --accent:#4d9dff; --accent-fg:#0b1017;
+  --warn-bg:#2a2412; --warn-line:#8a7420; --warn-fg:#f0dfa0;
+  --ok-bg:#13241a; --ok-line:#3f9142; --ok-fg:#8fdc97;
+  --bad-bg:#2a1414; --bad-line:#c25555; --bad-fg:#ffb4b4;
+}
+:root[data-theme="light"]{
+  --bg:#ffffff; --fg:#16181d; --muted:#5c6370; --line:#e3e6ec;
+  --card:#f7f8fa; --accent:#0b6bcb; --accent-fg:#ffffff;
+  --warn-bg:#fff8e1; --warn-line:#e6c200; --warn-fg:#5c4a00;
+  --ok-bg:#eef7ee; --ok-line:#3f9142; --ok-fg:#1d5b21;
+  --bad-bg:#fdeeee; --bad-line:#d64545; --bad-fg:#8a1f1f;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+  line-height:1.85;font-size:16px;overflow-x:hidden}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);padding:14px 0;font-size:13px;color:var(--muted)}
+header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font-weight:700;color:var(--fg);text-decoration:none}
+h1{font-size:1.85rem;line-height:1.45;margin:28px 0 14px}
+h2{font-size:1.32rem;margin:46px 0 12px;padding-top:14px;border-top:2px solid var(--line);line-height:1.5}
+h3{font-size:1.08rem;margin:28px 0 10px}
+p{margin:0 0 16px}
+a{color:var(--accent)}
+ul,ol{padding-left:1.4em;margin:0 0 16px}
+li{margin-bottom:8px}
+.meta{font-size:13px;color:var(--muted);margin-bottom:20px}
+.pr-note{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--muted);margin:0 0 24px}
+.warn{background:var(--warn-bg);border-left:4px solid var(--warn-line);color:var(--warn-fg);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;font-size:.95rem}
+.tablewrap{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.92rem}
+th,td{border-bottom:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+th{background:var(--card);font-weight:700;white-space:nowrap}
+th:first-child,td:first-child{min-width:8.5em}
+tr:last-child td{border-bottom:none}
+td.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tablenote{font-size:.86rem;color:var(--muted);margin:-12px 0 20px;line-height:1.7}
+
+/* --- 計算機 --- */
+.calc{border:2px solid var(--accent);border-radius:12px;padding:22px;margin:28px 0;background:var(--card)}
+.calc h2{border:none;margin:0 0 6px;padding:0;font-size:1.2rem}
+.calc .sub{font-size:.88rem;color:var(--muted);margin:0 0 18px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;font-size:.92rem;margin-bottom:6px}
+.field .hint{font-weight:400;color:var(--muted);font-size:.85rem}
+select,input[type=number]{width:100%;padding:10px 12px;font-size:1rem;font-family:inherit;
+  border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+input[type=range]{width:100%;margin-top:6px}
+.spend-val{font-variant-numeric:tabular-nums;font-weight:700;font-size:1.15rem}
+.result{margin-top:22px;padding:18px 20px;border-radius:10px;border-left:5px solid var(--line);background:var(--bg)}
+.result.good{background:var(--ok-bg);border-left-color:var(--ok-line)}
+.result.bad{background:var(--bad-bg);border-left-color:var(--bad-line)}
+.verdict{font-size:1.28rem;font-weight:700;line-height:1.5;margin:0 0 10px}
+.result.good .verdict{color:var(--ok-fg)}
+.result.bad .verdict{color:var(--bad-fg)}
+.breakdown{list-style:none;padding:0;margin:14px 0 0;font-size:.93rem}
+.breakdown li{display:flex;justify-content:space-between;gap:14px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.breakdown li:last-child{border-bottom:none;font-weight:700;padding-top:10px}
+.breakdown .v{font-variant-numeric:tabular-nums;white-space:nowrap}
+.cta{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;margin:32px 0;text-align:center}
+.cta .code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:1.45rem;font-weight:700;letter-spacing:.12em;display:block;margin:10px 0 4px;word-break:break-all}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-fg);padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:700;margin-top:12px}
+.btn:hover{opacity:.9}
+.cta small{display:block;margin-top:12px;line-height:1.6}
+details{border:1px solid var(--line);border-radius:8px;padding:0 16px;margin-bottom:10px;background:var(--card)}
+details summary{cursor:pointer;padding:14px 0;font-weight:700;line-height:1.6}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:12px}
+details p:last-child{margin-bottom:16px}
+.disclaimer{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px;font-size:.87rem;color:var(--muted);margin:24px 0}
+footer.site{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 60px;font-size:.86rem;color:var(--muted)}
+.themebtn{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:5px 11px;cursor:pointer;font-size:12px;font-family:inherit}
+@media (max-width:600px){body{font-size:15.5px}h1{font-size:1.45rem}h2{font-size:1.18rem}.wrap{padding:0 16px}.calc{padding:16px}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">クリプトカード税務ラボ</a>
+    <button class="themebtn" id="tt" type="button">テーマ切替</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Triaカードは元が取れるのか？<br>年間利用額から損益分岐を計算する</h1>
+
+<p class="meta">公開：2026年8月2日／最終更新：2026年8月2日｜実測した実効手数料と公式のプラン別還元率をもとに計算しています。</p>
+
+<div class="pr-note">
+  <strong>【PR・アフィリエイト表記】</strong>本ページにはTriaの紹介リンクおよびアクセスコードを掲載しており、当サイト運営者は紹介報酬を受け取ります。ただし<strong>計算結果が「赤字」と出る条件でも、そのまま表示します。</strong>登録を促すために有利な前提を使うことはしていません。
+</div>
+
+<p>「最大6%キャッシュバック」という数字だけを見ると、日本のクレジットカード（還元率1%が標準）より圧倒的に有利に見えます。</p>
+
+<p>しかし実際に手元に残る金額は、還元率から<strong>雑所得課税・年会費・為替手数料</strong>を差し引いた後の数字です。そして<strong>実測したところ、この3つの合計は多くの人が思っているより重い</strong>ことが分かりました。</p>
+
+<p>結論から言うと、<strong>年間100万円の利用では、どのプランを選んでも赤字になります。</strong></p>
+
+<p>ではいくら使えば元が取れるのか。下の計算機で、あなたの条件を入れて確かめてください。</p>
+
+<!-- ============ 計算機 ============ -->
+<section class="calc">
+  <h2>損益分岐シミュレーター</h2>
+  <p class="sub">年間利用額と課税所得を入れると、税・年会費・手数料をすべて差し引いた手取りが出ます。</p>
+
+  <div class="field">
+    <label for="plan">プラン</label>
+    <select id="plan">
+      <option value="virtual">Virtual — 還元1.5%（月$100まで、超過後0.5%）／年会費$25</option>
+      <option value="signature" selected>Signature — 還元4.5%（月$1,000まで、超過後1%）／年会費$109</option>
+      <option value="premium">Premium — 還元6%（月$2,000まで、超過後1%）／年会費$250</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="spend">年間利用額 <span class="hint">— このカードで払う金額</span></label>
+    <div class="spend-val" id="spendLabel">1,000,000 円</div>
+    <input type="range" id="spend" min="100000" max="4000000" step="50000" value="1000000">
+  </div>
+
+  <div class="field">
+    <label for="rate">課税所得の区分 <span class="hint">— 所得税＋住民税の合計税率</span></label>
+    <select id="rate">
+      <option value="0.15">195万円以下 — 15%</option>
+      <option value="0.20">195万円超 330万円以下 — 20%</option>
+      <option value="0.30">330万円超 695万円以下 — 30%</option>
+      <option value="0.33">695万円超 900万円以下 — 33%</option>
+      <option value="0.43" selected>900万円超 1,800万円以下 — 43%</option>
+      <option value="0.50">1,800万円超 4,000万円以下 — 50%</option>
+      <option value="0.55">4,000万円超 — 55%</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label for="fee">実効手数料率（%） <span class="hint">— 既定値は当サイトの実測値</span></label>
+    <input type="number" id="fee" value="1.444" step="0.001" min="0" max="10">
+  </div>
+
+  <div class="result" id="result" aria-live="polite"></div>
+</section>
+
+<p class="tablenote">計算前提：1ドル＝156.71円（実測時のレート）。キャッシュバックは雑所得として総合課税されるものとして計算しています。復興特別所得税は考慮していません。月額上限を超えた利用分にはフロアレートを適用しています。</p>
+
+<h2>なぜ赤字になるのか</h2>
+
+<p>構造はシンプルです。</p>
+
+<ul>
+  <li><strong>手数料は確実に出ていく。</strong>実測した実効コストは1.444%。これは税率と無関係に、使った金額に比例して発生します</li>
+  <li><strong>還元は課税で目減りする。</strong>最上位のPremiumでも還元6%は、税率43%なら税引後3.42%まで落ちます</li>
+  <li><strong>年会費は固定費。</strong>利用額が小さいほど、1円あたりの負担が重くなります</li>
+</ul>
+
+<p>つまり<strong>「税引後の還元率」から「手数料率」を引いた差が、年会費を回収できるかどうか</strong>——それだけの話です。この差が小さいほど、必要な利用額は跳ね上がります。</p>
+
+<h3>年間100万円利用時の実額（税率43%の場合）</h3>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>プラン</th><th>還元</th><th>課税43%</th><th>年会費</th><th>手数料1.444%</th><th>差引</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Virtual（1.5%）</td><td class="num">+6,881</td><td class="num">−2,959</td><td class="num">−3,918</td><td class="num">−14,440</td><td class="num"><strong>−14,436円</strong></td></tr>
+    <tr><td>Signature（4.5%）</td><td class="num">+45,000</td><td class="num">−19,350</td><td class="num">−17,081</td><td class="num">−14,440</td><td class="num"><strong>−5,871円</strong></td></tr>
+    <tr><td>Premium（6.0%）</td><td class="num">+60,000</td><td class="num">−25,800</td><td class="num">−39,178</td><td class="num">−14,440</td><td class="num"><strong>−19,418円</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="warn">
+  <strong>還元率が高いプランほど損をしています。</strong>Premium（還元6%）はSignature（還元4.5%）より13,547円も成績が悪い。年会費の差が還元の差を上回るためです。<strong>「最大6%」という数字だけで最上位プランを選ぶと、かえって赤字が拡大します。</strong>
+</div>
+
+<h2>使いすぎても損をする（黒字は「範囲」）</h2>
+
+<p>ここが本ページで最も重要な発見です。<strong>損益分岐点は「これ以上使えば得」という下限だけではありません。上限もあります。</strong></p>
+
+<p>還元率には月額上限があり（Signatureは月$1,000、Premiumは月$2,000）、<strong>超えた分は1%まで落ちます。</strong>ところが手数料1.444%は上限と無関係に、使った金額すべてにかかります。</p>
+
+<p>つまり<strong>上限を超えて使うと、超えた分は「還元1%（課税後さらに目減り）を得るために1.444%払う」ことになり、使うほど損が増えます。</strong></p>
+
+<h3>Signature・税率43%の場合</h3>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>年間利用額</th><th>差引</th><th></th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="num">100万円</td><td class="num">−5,871円</td><td>年会費を回収できていない</td></tr>
+    <tr><td class="num">150万円</td><td class="num">−266円</td><td>ほぼ分岐点</td></tr>
+    <tr><td class="num">188万円</td><td class="num"><strong>+3,993円</strong></td><td><strong>月額上限ぴったり＝最大</strong></td></tr>
+    <tr><td class="num">250万円</td><td class="num">−1,415円</td><td>超過分の還元が1%に落ちる</td></tr>
+    <tr><td class="num">400万円</td><td class="num">−14,525円</td><td>使うほど損が拡大</td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="warn">
+  <strong>最大でも年+3,993円です。</strong>最も条件の良い金額をぴったり狙っても、この程度にしかなりません。<strong>「還元6%」という表示から受ける印象とは、桁が違う</strong>ことを理解しておいてください。
+</div>
+
+<h3>税率別・黒字になる範囲</h3>
+
+<p>直感に反しますが、<strong>課税所得が高い人ほどこのカードは不利</strong>です。還元は課税で目減りするのに、手数料は税率と無関係だからです。<strong>税率が上がると範囲が狭まり、やがて消滅します。</strong></p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>税率</th><th>Virtual</th><th>Signature</th><th>Premium</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>20%</td><td>黒字にならない</td><td class="num">79万 〜 552万円</td><td class="num">117万 〜 1,728万円</td></tr>
+    <tr><td>30%</td><td>黒字にならない</td><td class="num">100万 〜 390万円</td><td class="num">142万 〜 1,243万円</td></tr>
+    <tr><td>33%</td><td>黒字にならない</td><td class="num">109万 〜 349万円</td><td class="num">152万 〜 1,122万円</td></tr>
+    <tr><td>43%</td><td>黒字にならない</td><td class="num">152万 〜 234万円</td><td class="num">198万 〜 778万円</td></tr>
+    <tr><td>50%</td><td>黒字にならない</td><td><strong>黒字にならない</strong></td><td class="num">252万 〜 581万円</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tablenote">実効手数料1.444%、1ドル＝156.71円での試算。概算であり、実際の税率は他の所得と合算して決まります。</p>
+
+<div class="warn">
+  <strong>Virtualはどの税率でも黒字になりません。</strong>還元1.5%が適用されるのは月$100（約1.6万円）までで、それを超えると0.5%に落ちます。この0.5%は課税後0.3%以下になり、手数料1.444%をどうやっても超えられません。<strong>年会費$25は安く見えますが、構造上どうやっても元が取れません。</strong>
+</div>
+
+<h2>それでも使う価値がある人</h2>
+
+<p>ここまでの数字だけ見ると全否定に見えますが、<strong>比較対象を間違えないことが重要</strong>です。</p>
+
+<p>日本のクレジットカードのポイント還元は「値引き」として扱われ、課税対象外とされるのが通例です。単純な損得なら、還元率1%の普通のクレジットカードが勝ちます。</p>
+
+<p>しかし<strong>すでに暗号資産を保有していて、それを使いたい</strong>場合、代替手段は「国内取引所に送金して売却し、日本円にする」ことです。<strong>その売却自体も課税イベント</strong>であり、送金と着金の手間も発生します。</p>
+
+<p>つまり現実の選択は、</p>
+
+<p><strong>「クリプトカード vs 一般クレカ」ではなく「クリプトカード vs 取引所で売却してから使う」</strong></p>
+
+<p>この比較なら、手間と時間の差で価値が出る場面があります。<strong>このカードの価値は還元率ではなく利便性にある</strong>——それが実測から導かれる結論です。</p>
+
+<h3>向いている人</h3>
+<ul>
+  <li>すでに暗号資産を保有していて、国内取引所での売却を経ずに使いたい人</li>
+  <li><strong>年間利用額が黒字レンジに収まる人</strong>（税率43%ならSignatureで年152万〜234万円、Premiumで年198万〜778万円）。<strong>多すぎても少なすぎてもダメ</strong>という点に注意</li>
+  <li>課税所得がそれほど高くない人（税率が低いほど黒字レンジが広がるため、失敗しにくい）</li>
+  <li>損益計算ツールを既に使っていて、記録の追加負担が小さい人</li>
+  <li>課税所得がそれほど高くない人（分岐点が下がるため有利）</li>
+</ul>
+
+<h3>向いていない人</h3>
+<ul>
+  <li><strong>確定申告を自分でやりたくない人。</strong>決済回数に比例して作業量が増えます</li>
+  <li>年間の利用額が100万円程度以下の人（試算ではどのプランでも赤字）</li>
+  <li>少額決済を日常的に多数行う人（1件あたりの還元に対して記録コストが見合わない）</li>
+  <li>決済したその場で還元を受け取りたい人（確定まで最大90日、支払いは四半期ごと）</li>
+  <li>日本円で直接チャージしたい人（対応していません）</li>
+</ul>
+
+<div class="cta">
+  <p style="margin:0 0 4px"><strong>計算結果が黒字だった方へ</strong></p>
+  <p style="margin:0 0 8px;font-size:.92rem">登録にはアクセスコードが必要です。</p>
+  <span class="code">OC8SX94740</span>
+  <a class="btn" href="https://app.tria.so/?accessCode=OC8SX94740" rel="nofollow sponsored noopener" target="_blank">Triaに登録する（コード自動入力）</a>
+  <small>
+    このリンク経由の登録により、当サイト運営者に紹介報酬が発生します。<br>
+    <strong>計算結果が赤字だった方には、登録をおすすめしません。</strong>上の計算機でご自身の条件を確認してから判断してください。
+  </small>
+</div>
+
+<h2>よくある質問</h2>
+
+<details>
+<summary>Triaカードは結局、元が取れますか？</summary>
+<p>年間利用額によりますが、<strong>黒字になるのは「しきい値以上」ではなく「一定の範囲内」</strong>です。課税所得900万円超（税率43%）の場合、黒字になるのは<strong>Signatureで年152万〜234万円、Premiumで年198万〜778万円</strong>の範囲です。</p>
+<p>下限を下回ると年会費を回収できず赤字。<strong>上限を超えると月額上限を超えた分の還元率が1%まで落ちるため、使うほど損が増えて再び赤字</strong>になります。</p>
+<p>年間100万円の利用では、Virtualで−14,436円、Signatureで−5,871円、Premiumで−19,418円と、どのプランでも赤字でした。<strong>最も条件の良い金額をぴったり狙っても、Signature・税率43%で年3,993円が上限</strong>です。税率が低い人ほど範囲は広がり、<strong>Virtualはどの税率でも黒字になりません。</strong></p>
+</details>
+
+<details>
+<summary>クリプトカードのデメリットは何ですか？</summary>
+<p>主なデメリットは5つです。</p>
+<ul>
+<li><strong>決済のたびに課税イベントが発生する。</strong>暗号資産の譲渡として扱われ、原則として雑所得になります。決済回数分の損益計算が必要です</li>
+<li><strong>キャッシュバックも課税対象となり得る。</strong>表示還元率がそのまま手取りにはなりません</li>
+<li><strong>為替手数料が為替レートに内包されている。</strong>明細の手数料欄を見ても実際のコストが分かりません。実測では市場レート基準で1.444%でした</li>
+<li><strong>還元率に月額上限がある。</strong>上限を超えた分は1%程度まで下がります</li>
+<li><strong>受け取りに最大90日かかる。</strong>支払いは四半期ごとです</li>
+</ul>
+</details>
+
+<details>
+<summary>年会費の高いプランを選んだ方が得ですか？</summary>
+<p><strong>利用額が少ないなら逆効果です。</strong>年会費は固定費なので、利用額が小さいほど1円あたりの負担が重くなります。年間100万円の利用では、年会費$250のPremium（−19,418円）が、年会費$109のSignature（−5,871円）より<strong>13,547円も損</strong>をします。</p>
+<p>還元率6%という数字だけで最上位プランを選ぶと、かえって赤字が拡大します。損益分岐点もPremiumの方が高く、年約198万円の利用が必要です。</p>
+</details>
+
+<details>
+<summary>課税所得が高い人ほど不利というのは本当ですか？</summary>
+<p><strong>本当です。</strong>直感に反しますが、構造上そうなります。キャッシュバックは雑所得として総合課税されるため税率が高いほど目減りしますが、実効手数料1.444%は税率と無関係に出ていきます。</p>
+<p>したがって高所得者ほど手取りが減り、<strong>黒字になる範囲が狭くなります。</strong>Signatureの場合、税率20%なら年79万〜552万円の範囲で黒字ですが、税率43%では<strong>年152万〜234万円</strong>まで狭まり、<strong>税率50%では黒字になる金額が存在しなくなります。</strong></p>
+</details>
+
+<details>
+<summary>普通のクレジットカードと比べてどうですか？</summary>
+<p><strong>単純な損得なら普通のクレジットカードが勝ちます。</strong>日本のクレジットカードのポイント還元は値引きとして扱われ課税対象外とされるのが通例のため、還元率1%のカードなら年間100万円の利用で1万円が非課税で残ります。</p>
+<p>ただし比較対象を間違えないでください。すでに暗号資産を保有していてそれを使いたい場合、代替手段は国内取引所での売却であり、<strong>その売却自体も課税イベント</strong>で、送金と着金の手間も発生します。現実の選択は「クリプトカード対一般クレカ」ではなく<strong>「クリプトカード対 取引所で売却してから使う」</strong>であり、この比較なら利便性の差で価値が出ます。</p>
+</details>
+
+<details>
+<summary>どういう人なら使う価値がありますか？</summary>
+<p>すでに暗号資産を保有していて、それを国内取引所での売却を経ずに使いたい人です。そのうえで<strong>年間150万円前後以上をこのカードに集中させられること</strong>、損益計算ツールを既に使っていて記録の追加負担が小さいこと、月額上限の範囲に利用額が収まることが条件になります。</p>
+<p>逆に、確定申告を自分でやりたくない人、年間利用額が100万円程度以下の人、少額決済を日常的に多数行う人には向きません。</p>
+</details>
+
+<h2>税金の詳細はこちら</h2>
+
+<p>本ページは「損得の判断」に絞っています。<strong>実際にどう課税されるのか、いつ何税になるのか、確定申告の実務手順</strong>については、別ページで一次情報をもとに詳しく整理しています。</p>
+
+<ul>
+  <li><a href="/">Triaカードの税金は結局いくら？2026年8月時点の正確な答えと手数料実測</a>
+  <br><span style="font-size:.9rem;color:var(--muted)">— 分離課税20%の適用時期、1回の決済で発生する課税イベントの分解、損益計算の実務手順、実効手数料1.444%の検証過程、FAQ19問</span></li>
+</ul>
+
+<div class="disclaimer">
+  <strong>免責事項</strong><br>
+  本ページの計算は、公表されているプラン別還元率と当サイトの実測値にもとづく<strong>概算</strong>であり、実際の損益を保証するものではありません。料金体系・還元率・月額上限は変更される可能性があるため、申込前に必ず公式サイトの最新情報をご確認ください。<br><br>
+  本ページは<strong>一般的な情報提供</strong>であり、税務・投資に関する助言ではありません。税務上の取扱いは個々の事情により異なり、法令改正により変わります。実際の申告にあたっては税理士等の専門家にご相談ください。暗号資産は価格変動により元本を割り込む可能性があります。サービスの日本居住者向け提供可否については、利用者ご自身で公式情報をご確認ください。
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>クリプトカード税務ラボ｜最終更新 2026年8月2日</p>
+    <p>本サイトはアフィリエイトプログラムに参加しており、紹介リンク経由の登録により報酬を受け取ります。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, k='theme';
+  try{ var s=localStorage.getItem(k); if(s) root.setAttribute('data-theme',s); }catch(e){}
+  var b=document.getElementById('tt');
+  if(b) b.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur) cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light';
+    var next = cur==='dark' ? 'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem(k,next); }catch(e){}
+  });
+})();
+
+(function(){
+  var FX = 156.71;
+  var PLANS = {
+    virtual:   {name:'Virtual',   fee:25,  base:0.015, cap:100,  floor:0.005},
+    signature: {name:'Signature', fee:109, base:0.045, cap:1000, floor:0.01},
+    premium:   {name:'Premium',   fee:250, base:0.06,  cap:2000, floor:0.01}
+  };
+
+  function yen(n){
+    var s = Math.round(Math.abs(n)).toLocaleString('ja-JP');
+    return (n<0?'−':'+') + s + '円';
+  }
+  function yenPlain(n){ return Math.round(n).toLocaleString('ja-JP') + '円'; }
+
+  // 年間利用額(円)から、税・年会費・手数料を引いた手取り(円)
+  function net(spendJpy, p, taxRate, allIn){
+    var moUsd = spendJpy / 12 / FX;
+    var cbUsd = (Math.min(moUsd, p.cap) * p.base + Math.max(0, moUsd - p.cap) * p.floor) * 12;
+    var cbJpy = cbUsd * FX;
+    var tax   = cbJpy * taxRate;
+    var fee   = p.fee * FX;
+    var cost  = spendJpy * allIn;
+    return {cb:cbJpy, tax:tax, fee:fee, cost:cost, net:cbJpy - tax - fee - cost};
+  }
+
+  // 黒字になるのは「レンジ」。月額上限で最大になり、それを超えると
+  // 超過分の還元率がフロアまで落ちるため再び赤字に転じる。
+  // したがって下限と上限の2点を別々に二分探索する。
+  function profitRange(p, taxRate, allIn){
+    var capA = p.cap * 12 * FX;              // 月額上限に相当する年間利用額＝最大点
+    if (net(capA, p, taxRate, allIn).net < 0) return null;  // どこでも黒字にならない
+    var lo = 0, hi = capA, mid, i;
+    for (i=0; i<100; i++){                    // 下限
+      mid = (lo+hi)/2;
+      if (net(mid, p, taxRate, allIn).net < 0) lo = mid; else hi = mid;
+    }
+    var low = hi;
+    var lo2 = capA, hi2 = 100000000;
+    for (i=0; i<100; i++){                    // 上限
+      mid = (lo2+hi2)/2;
+      if (net(mid, p, taxRate, allIn).net >= 0) lo2 = mid; else hi2 = mid;
+    }
+    return {low: low, high: lo2, peak: capA};
+  }
+
+  var elPlan=document.getElementById('plan'),
+      elSpend=document.getElementById('spend'),
+      elSpendLabel=document.getElementById('spendLabel'),
+      elRate=document.getElementById('rate'),
+      elFee=document.getElementById('fee'),
+      elResult=document.getElementById('result');
+
+  function render(){
+    var p = PLANS[elPlan.value];
+    var spend = Number(elSpend.value);
+    var taxRate = Number(elRate.value);
+    var allIn = Number(elFee.value)/100;
+    if (!isFinite(allIn) || allIn < 0) allIn = 0;
+
+    elSpendLabel.textContent = spend.toLocaleString('ja-JP') + ' 円';
+
+    var r = net(spend, p, taxRate, allIn);
+    var rng = profitRange(p, taxRate, allIn);
+    var good = r.net >= 0;
+
+    var verdict, note;
+    if (rng === null){
+      verdict = '年 ' + yen(r.net) + ' の赤字';
+      note = 'この<strong>プランと税率の組み合わせでは、いくら使っても黒字になりません。</strong>' +
+             '月額上限（月$' + p.cap.toLocaleString('en-US') + '）を超えた分は還元率が' + (p.floor*100) +
+             '%まで落ちるのに、手数料は変わらず出ていくためです。より年会費の安いプランか、' +
+             '課税所得の低い年に検討してください。';
+    } else if (good){
+      verdict = '年 ' + yen(r.net) + ' の黒字';
+      note = 'この条件なら元が取れます。手取りは年間利用額の ' +
+             (r.net/spend*100).toFixed(2) + '% です。<br>' +
+             '黒字になるのは <strong>年' + yenPlain(rng.low) + ' 〜 ' + yenPlain(rng.high) +
+             '</strong> の範囲で、<strong>年' + yenPlain(rng.peak) + '</strong>（月額上限ぴったり）で最大になります。';
+    } else if (spend < rng.low){
+      verdict = '年 ' + yen(r.net) + ' の赤字';
+      note = '<strong>利用額が足りません。</strong>黒字化には年間 <strong>' + yenPlain(rng.low) +
+             '</strong>（月 ' + yenPlain(rng.low/12) + '）以上の利用が必要です。あと <strong>' +
+             yenPlain(rng.low - spend) + '</strong> 足りません。';
+    } else {
+      verdict = '年 ' + yen(r.net) + ' の赤字';
+      note = '<strong>使いすぎです。</strong>月額上限（月$' + p.cap + '）を超えた分は還元率が' +
+             (p.floor*100) + '%まで落ちるため、使うほど損が増えます。' +
+             '黒字なのは <strong>年' + yenPlain(rng.high) + '</strong> までで、' +
+             '<strong>' + yenPlain(spend - rng.high) + '</strong> 使いすぎています。';
+    }
+
+    elResult.className = 'result ' + (good ? 'good' : 'bad');
+    elResult.innerHTML =
+      '<p class="verdict">' + verdict + '</p>' +
+      '<p style="margin:0;font-size:.94rem">' + note + '</p>' +
+      '<ul class="breakdown">' +
+        '<li><span>キャッシュバック（' + p.name + '）</span><span class="v">' + yen(r.cb) + '</span></li>' +
+        '<li><span>雑所得課税 ' + Math.round(taxRate*100) + '%</span><span class="v">' + yen(-r.tax) + '</span></li>' +
+        '<li><span>年会費 $' + p.fee + '</span><span class="v">' + yen(-r.fee) + '</span></li>' +
+        '<li><span>実効手数料 ' + (allIn*100).toFixed(3) + '%</span><span class="v">' + yen(-r.cost) + '</span></li>' +
+        '<li><span>差引</span><span class="v">' + yen(r.net) + '</span></li>' +
+      '</ul>';
+  }
+
+  [elPlan, elSpend, elRate, elFee].forEach(function(el){
+    el.addEventListener('input', render);
+    el.addEventListener('change', render);
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
