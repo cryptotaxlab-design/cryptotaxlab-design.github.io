@@ -1,0 +1,5 @@
+# デプロイ用スクリプトは公開サイトに配信しない
+deploy.sh
+
+# macOS
+.DS_Store
