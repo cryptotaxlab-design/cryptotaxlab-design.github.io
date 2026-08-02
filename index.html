@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triaカードの税金は結局いくら？2026年8月時点の正確な答えと手数料実測｜還元6%の税引後リアル</title>
+<meta name="description" content="Triaカードの実取引明細を検証。表示手数料の合計1.5%に対し実際の上乗せは1.000%で、差の0.5%は為替レートに内包されていた。オールイン実効コストは1.444%。雑所得課税と年会費まで引くと年100万円の利用ではどのプランも赤字で、黒字化には年150万円前後が必要。還元6%は月額上限つきで最上位プラン限定。分離課税20%の適用時期とJPYC経由ルートの税務まで一次情報で整理した2026年8月版。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://cryptotaxlab-design.github.io/">
+<meta property="og:url" content="https://cryptotaxlab-design.github.io/">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Triaカードの税金は結局いくら？2026年8月時点の正確な答えと手数料実測">
+<meta property="og:description" content="実取引明細から検証：オールイン実効コスト1.444%。税と年会費まで引くと年100万円の利用ではどのプランも赤字、黒字化には年150万円前後が必要。「分離課税20%」の適用時期も一次情報で整理。">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Triaカードの税金は結局いくら？2026年8月時点の正確な答えと手数料実測",
+      "description": "Triaカード利用時の課税関係を国税庁資料と令和8年度税制改正から整理し、還元6%の税引後実質利回りと手数料実測値を検証したガイド。",
+      "inLanguage": "ja",
+      "datePublished": "2026-08-02",
+      "dateModified": "2026-08-02",
+      "author": { "@type": "Person", "name": "運営者" },
+      "publisher": { "@type": "Organization", "name": "クリプトカード税務ラボ" },
+      "about": [
+        { "@type": "Thing", "name": "暗号資産の税金" },
+        { "@type": "Thing", "name": "クリプトカード" },
+        { "@type": "Thing", "name": "申告分離課税" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Triaカードで買い物をすると、2026年8月現在は何税になりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "原則として雑所得（総合課税）です。暗号資産を決済に使用した時点で「譲渡」があったものとして扱われ、使用時の時価と取得価額の差額が所得になります。給与所得と合算されるため、所得税と住民税を合わせた税率は最大で約55%になり得ます。よく報じられている「一律20%の申告分離課税」は令和8年度税制改正で法律上は成立していますが、適用開始は金融商品取引法改正の施行翌年1月1日以降とされ、2028年1月が有力とみられています。したがって2026年8月時点の取引には適用されません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2028年に分離課税20%が始まれば、カード決済の損益も20%になりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "現時点では確定していません。令和8年度税制改正大綱では分離課税の対象が「国民の資産形成に資する暗号資産」に限定されると示されており、対象は現物取引・デリバティブ取引・ETFから生じる所得が中心とされています。日常的な決済に使用したことで生じる損益がこの範囲に含まれるかは、今後の政令・省令や国税庁の解釈を待つ必要があります。決済損益が対象外と整理された場合、2028年以降も決済分だけは雑所得のまま総合課税となる可能性が残ります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "USDCなどのステーブルコインで決済すれば課税されませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "課税されないわけではありません。USDCは米ドル建てであり円建てではないため、取得した時点と使用した時点の為替レートの差が為替差損益として発生します。個人の場合これは雑所得に区分されます。1USDC=1USDに固定されていても、1ドルの円換算額は日々動くため、円ベースでは損益が出ます。価格変動の幅はビットコイン等より小さいものの、課税イベント自体は発生します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "キャッシュバック6%は税引後だと実質何%になりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "受け取ったキャッシュバックが雑所得として総合課税された場合、課税所得695万円超900万円以下の区分（所得税23%＋住民税10%＝33%）なら実質約4.0%、課税所得900万円超1800万円以下の区分（所得税33%＋住民税10%＝43%）なら実質約3.4%になります。ただし暗号資産で受け取るキャッシュバックの課税上の取扱いには論点があり、通常のポイント還元のような値引き処理とは異なる扱いになる可能性があります。金額が大きくなる場合は税理士への確認を推奨します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "キャッシュバックはいつ受け取れますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "すぐには受け取れません。公式ヘルプセンターによれば、キャッシュバックは取引が完全に確定してから付与され、チャージバックを考慮して最大90日かかる場合があります。支払いは四半期ごとで、USDTまたはUSDCで行われます。本サイトの実測でも、決済直後の明細ではステータスが「保留」であり、確定額ではありませんでした。決済したその場で還元が入るクレジットカードとは感覚が異なる点に注意してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "確定申告は必ず必要ですか？20万円以下なら不要と聞きましたが。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "給与を1か所から受けている給与所得者で、給与所得・退職所得以外の所得の合計が年間20万円以下であれば、所得税の確定申告は不要とされています。ただしこれは所得税の話であり、住民税の申告は別途必要です。また医療費控除やふるさと納税のワンストップ特例を使わず確定申告をする場合は、20万円以下であっても暗号資産の所得を含めて申告する必要があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "決済のたびに損益計算が必要だと、実務上どれくらい大変ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "決済1回ごとに課税イベントが発生するため、月20回使えば年間240件の記録が必要になります。記録すべきは日時、使用した暗号資産の銘柄と数量、その時点の円換算時価、取得価額、決済額です。クリプタクト等の損益計算ツールにウォレットアドレスを連携すれば自動取得できる場合がありますが、対応チェーンやカード決済特有の内部振替の扱いは事前に確認が必要です。少額決済を日常的に行うほど負担が増える構造になっています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "還元6%のクリプトカードと年利5%のレンディング、どちらが得ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "税率は原則としてどちらも雑所得・総合課税で同じため、税引後の差は表面利率の差にほぼ比例します。判断を分けるのは税率ではなく、対象となる金額の性質です。還元は「支出額」に対して付き、レンディングは「預入元本」に対して付きます。年間100万円を使う人の6%還元は6万円ですが、同じ6万円をレンディング5%で得るには120万円の元本を1年間拘束する必要があります。一方でレンディングには貸付先の信用リスクと途中解約制限があり、還元にはカードの年会費と為替・変換手数料がかかります。どちらが有利かは支出額と余剰資金額の比率で決まります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Triaの年会費はいくらですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "第三者メディアの2026年2月時点の記載では、Virtual（バーチャルのみ）が年25ドル、Signature（物理＋デジタル）が年109ドル、Premium（メタル＋デジタル）が年250ドルとされています。ただし料金体系は変更される可能性があるため、申込前に必ず公式サイトの最新表示を確認してください。年会費は還元額から差し引いて実質還元率を計算する必要があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "手数料は具体的にいくらかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "第三者メディアの記載によれば、米ドル以外の通貨での決済には最大3%の為替手数料、ATM出金には3%＋2ドル程度の手数料がかかるとされています。またウォレット内資産をUSDCへ変換する際にルーティングコストが発生する場合があります。いずれも「最大」表示であり、実際のコストは通貨・国・経路によって変動します。日本円建ての支払いでは為替手数料が実質的に上乗せされるため、表示還元率から差し引いて考える必要があります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "物理カードは日本にどれくらいで届きますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "複数の日本語レビューでは、日本への配送に8〜12週間程度かかったという報告があります。すぐに使い始めたい場合はバーチャルカードを先に発行する運用が現実的です。当サイトの実測値は下記の実測セクションに記載しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "日本に住んでいてもTriaは使えますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "本サイトは特定個人の利用可否を保証するものではありません。暗号資産関連サービスの日本居住者向け提供可否は、資金決済法および金融商品取引法上の登録状況により変わり得ます。申込前に必ず公式の利用規約と対象国の記載を自身で確認し、判断してください。また日本円で直接チャージすることはできず、国内取引所で暗号資産を購入してから送金する手順が必要になります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "アクセスコードとは何ですか？入力すると何が変わりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Triaはベータ提供のため、登録時にアクセスコードの入力が必要です。コード付きのリンクから登録すると自動で入力された状態になります。コードにより待機列をスキップでき、キャッシュバック優遇の対象になるとされています。なおコードを発行した紹介者側にも報酬が入る仕組みのため、コードを掲載しているサイトは基本的に紹介報酬を得る立場にあります。本サイトも同様です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "損失が出た場合、他の所得と相殺できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026年8月現在、暗号資産の損失は雑所得内の他の雑所得としか通算できず、給与所得や事業所得とは損益通算できません。また翌年以降への繰越控除もできません。令和8年度税制改正では3年間の繰越控除制度の創設が示されていますが、これも分離課税の適用開始と同じタイミングとなる見込みです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "オンチェーンで運用しながらカードを使うと税金はどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "課税イベントが複数重なります。運用による報酬を受け取った時点で受領時時価が所得となり、その資産を決済に使用した時点で改めて譲渡損益が発生します。さらに運用先のプロトコルでトークンの交換が挟まる場合、その交換自体も課税対象になり得ます。利回りが高いほど計算対象の取引件数が増えるため、事前に記録方法を決めておくことを推奨します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Triaの手数料は実際に何%かかりましたか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026年8月1日に日本で2,000円の決済を行い、取引明細から検証しました。適用為替レートは1USD=156.71円、実際の請求額は12.89ドルでした。2,000円÷156.71＝12.7624ドルなので、明細上の上乗せはちょうど1.000%です。一方、明細に表示されていた手数料はVisa 1%＋Tria 0.50%の合計1.5%で、数字が合いません。理由は、Tria手数料0.50%が請求額への加算ではなく為替レートに内包されていたためです。同日の市場レート157.40円と比べると適用レートは0.438%不利で、これがTria手数料0.50%にほぼ一致します。市場レート基準のオールイン実効コストは1.444%でした。手数料の表示行を足すだけでは実際のコストは分かりません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "JPYC経由でTriaにチャージすると税金は変わりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "課税される金額と計算の手間が大きく変わります。JPYCは資金決済法上の電子決済手段で、日本円と1対1で連動します。円でJPYCを取得した時点で取得価額が円で確定し、円建てのため為替差損益が原則生じません。JPYCをUSDCにスワップする時点で譲渡として課税対象になりますが、JPYCは円と等価なので損益はほぼゼロです。その後USDCで決済するまでの間に生じるUSD/JPYの変動分だけが為替差損益となるため、スワップから決済までが短ければ課税対象額は極小になります。これに対し、数年前に取得した暗号資産をそのまま決済に使うと、取得時からの含み益が一括で実現し、金額も計算の手間も大きくなります。ただし課税イベント自体は発生するため、申告義務がなくなるわけではありません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "結局、普通のクレジットカードと比べて得ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "単純な損得では、一般的な1%還元のクレジットカードが勝ちます。実測のオールイン手数料1.444%を使い、年間100万円の利用、課税所得900万円超（税率43%）で計算すると、税引後の手取りはVirtualで−14,436円、Signatureで−5,871円、Premiumで−19,418円と、どのプランでも赤字になります。理由は、手数料1.444%が確実に出ていくコストである一方、還元は43%課税されて目減りするためです。最上位のPremiumでも還元6%は税引後3.42%まで落ち、そこから年会費250ドルと手数料を引くと残りません。黒字化にはSignatureで年約152万円、Premiumで年約198万円の利用が必要です。日本のクレジットカードのポイント還元は値引きとして扱われ課税対象外とされるのが通例のため、1%還元のカードなら年100万円の利用で1万円が非課税で残ります。ただし比較対象を間違えないでください。すでに暗号資産を保有していてそれを使いたい場合、代替手段は国内取引所での売却であり、その売却自体も課税イベントで、送金と着金の手間も発生します。実際の選択は「Tria対一般クレカ」ではなく「Tria対 取引所で売却してから使う」であり、この比較ならTriaの利便性が生きます。Triaの価値は還元率ではなく利便性にあると考えるのが妥当です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "この記事の情報はいつ時点のものですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026年8月1日時点で確認できた一次情報および第三者メディアの記載に基づいています。税制は令和8年度改正の施行時期が未確定な部分を含み、Triaの料金体系も変更され得ます。各セクションに出典と参照時点を明記していますので、判断の前に必ず最新の公式情報を確認してください。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#ffffff; --fg:#16181d; --muted:#5c6370; --line:#e3e6ec;
+  --card:#f7f8fa; --accent:#0b6bcb; --accent-fg:#ffffff;
+  --warn-bg:#fff8e1; --warn-line:#e6c200; --warn-fg:#5c4a00;
+  --ok-bg:#eef7ee; --ok-line:#3f9142;
+  --todo-bg:#fff0f0; --todo-line:#d64545; --todo-fg:#8a1f1f;
+  --maxw:820px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1216; --fg:#e6e8ec; --muted:#9aa3b2; --line:#262b33;
+    --card:#161a20; --accent:#4d9dff; --accent-fg:#0b1017;
+    --warn-bg:#2a2412; --warn-line:#8a7420; --warn-fg:#f0dfa0;
+    --ok-bg:#13241a; --ok-line:#3f9142;
+    --todo-bg:#2a1414; --todo-line:#c25555; --todo-fg:#ffb4b4;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1216; --fg:#e6e8ec; --muted:#9aa3b2; --line:#262b33;
+  --card:#161a20; --accent:#4d9dff; --accent-fg:#0b1017;
+  --warn-bg:#2a2412; --warn-line:#8a7420; --warn-fg:#f0dfa0;
+  --ok-bg:#13241a; --ok-line:#3f9142;
+  --todo-bg:#2a1414; --todo-line:#c25555; --todo-fg:#ffb4b4;
+}
+:root[data-theme="light"]{
+  --bg:#ffffff; --fg:#16181d; --muted:#5c6370; --line:#e3e6ec;
+  --card:#f7f8fa; --accent:#0b6bcb; --accent-fg:#ffffff;
+  --warn-bg:#fff8e1; --warn-line:#e6c200; --warn-fg:#5c4a00;
+  --ok-bg:#eef7ee; --ok-line:#3f9142;
+  --todo-bg:#fff0f0; --todo-line:#d64545; --todo-fg:#8a1f1f;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+  line-height:1.85; font-size:16px; overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+header.site{border-bottom:1px solid var(--line); padding:14px 0; font-size:13px; color:var(--muted)}
+header.site .wrap{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+.brand{font-weight:700; color:var(--fg); text-decoration:none}
+
+h1{font-size:1.9rem; line-height:1.45; margin:28px 0 14px; letter-spacing:.01em}
+h2{font-size:1.35rem; margin:48px 0 12px; padding-top:14px; border-top:2px solid var(--line); line-height:1.5}
+h3{font-size:1.1rem; margin:30px 0 10px; line-height:1.55}
+h4{font-size:1rem; margin:24px 0 8px; line-height:1.6; color:var(--accent)}
+p{margin:0 0 16px}
+a{color:var(--accent)}
+small{color:var(--muted)}
+ul,ol{padding-left:1.4em; margin:0 0 16px}
+li{margin-bottom:8px}
+
+.meta{font-size:13px; color:var(--muted); margin-bottom:20px}
+.pr-note{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:12px 14px; font-size:13px; color:var(--muted); margin:0 0 24px;
+}
+.summary{
+  background:var(--ok-bg); border-left:4px solid var(--ok-line);
+  padding:18px 20px; border-radius:0 8px 8px 0; margin:0 0 28px;
+}
+.summary h2{border:none; margin:0 0 10px; padding:0; font-size:1.05rem}
+.summary ol{margin:0; padding-left:1.3em}
+.summary li{margin-bottom:10px}
+
+.warn{
+  background:var(--warn-bg); border-left:4px solid var(--warn-line); color:var(--warn-fg);
+  padding:14px 18px; border-radius:0 8px 8px 0; margin:20px 0; font-size:.95rem;
+}
+.warn strong{color:inherit}
+
+.todo{
+  background:var(--todo-bg); border:2px dashed var(--todo-line); color:var(--todo-fg);
+  padding:14px 18px; border-radius:8px; margin:20px 0; font-size:.95rem;
+}
+.todo b{display:block; margin-bottom:6px; letter-spacing:.03em}
+
+.tablewrap{overflow-x:auto; margin:20px 0; border:1px solid var(--line); border-radius:8px}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:.92rem}
+th,td{border-bottom:1px solid var(--line); padding:11px 13px; text-align:left; vertical-align:top}
+th{background:var(--card); font-weight:700; white-space:nowrap}
+/* 1列目が1文字ずつ折り返すのを防ぐ */
+th:first-child,td:first-child{min-width:8.5em}
+tr:last-child td{border-bottom:none}
+td.num{text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+/* 表の注記は表の外に置く（横スクロールで隠れないように） */
+.tablenote{font-size:.86rem; color:var(--muted); margin:-12px 0 20px; line-height:1.7}
+
+.cta{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:22px; margin:32px 0; text-align:center;
+}
+.cta .code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:1.5rem; font-weight:700;
+  letter-spacing:.12em; display:block; margin:10px 0 4px; word-break:break-all;
+}
+.btn{
+  display:inline-block; background:var(--accent); color:var(--accent-fg);
+  padding:13px 28px; border-radius:8px; text-decoration:none; font-weight:700;
+  margin-top:12px;
+}
+.btn:hover{opacity:.9}
+.cta small{display:block; margin-top:12px; line-height:1.6}
+
+details{border:1px solid var(--line); border-radius:8px; padding:0 16px; margin-bottom:10px; background:var(--card)}
+details summary{cursor:pointer; padding:14px 0; font-weight:700; line-height:1.6}
+details[open] summary{border-bottom:1px solid var(--line); margin-bottom:12px}
+details p:last-child{margin-bottom:16px}
+
+.src{font-size:.86rem; color:var(--muted); margin:8px 0 0}
+ol.sources{font-size:.9rem; color:var(--muted)}
+ol.sources a{word-break:break-all}
+
+footer.site{border-top:1px solid var(--line); margin-top:56px; padding:28px 0 60px; font-size:.86rem; color:var(--muted)}
+.disclaimer{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 18px; font-size:.87rem; color:var(--muted); margin:24px 0}
+
+#toc{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:24px 0}
+#toc strong{display:block; margin-bottom:8px}
+#toc ol{margin:0; padding-left:1.3em; font-size:.94rem}
+#toc li{margin-bottom:5px}
+
+.themebtn{
+  background:none; border:1px solid var(--line); color:var(--muted);
+  border-radius:6px; padding:5px 11px; cursor:pointer; font-size:12px; font-family:inherit;
+}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  h1{font-size:1.5rem}
+  h2{font-size:1.2rem}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">クリプトカード税務ラボ</a>
+    <button class="themebtn" id="tt" type="button">テーマ切替</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Triaカードの税金は結局いくら？<br>2026年8月時点の正確な答えと、還元6%の税引後リアル</h1>
+
+<p class="meta">公開：2026年8月2日／最終更新：2026年8月2日｜本記事は一次情報（国税庁公表資料・税制改正大綱）と第三者メディアの記載を、<strong>出典と参照時点を明示して</strong>整理しています。</p>
+
+<div class="pr-note">
+  <strong>【PR・アフィリエイト表記】</strong>本記事にはTriaの紹介リンクおよびアクセスコードを掲載しており、当サイト運営者は紹介報酬を受け取ります。ただし報酬の有無によって記載内容を歪めないため、デメリット・コスト・税負担についても同じ密度で記載しています。<strong>還元率を高く見せるための都合の良い前提は使っていません。</strong>
+</div>
+
+<div class="summary">
+  <h2>先に結論（3行）</h2>
+  <ol>
+    <li><strong>2026年8月現在、Triaで買い物すると雑所得・総合課税で最大約55%。</strong>報道されている「一律20%」はまだ適用されていません。</li>
+    <li><strong>適用開始は2028年1月が有力。</strong>しかも分離課税の対象は「国民の資産形成に資する暗号資産」に限定され、<strong>カード決済で生じた損益が対象に入るかは未確定です。</strong></li>
+    <li><strong>実測したオールイン手数料は1.444%。</strong>これに雑所得課税と年会費を加えると、<strong>年100万円の利用ではどのプランでも赤字</strong>です（税率43%の場合、−5,900〜−19,400円）。黒字化には<strong>年150万円前後以上をこのカードに集中させる必要</strong>があります。<strong>還元率ではなく利便性で選ぶカードです。</strong></li>
+  </ol>
+</div>
+
+<nav id="toc">
+  <strong>目次</strong>
+  <ol>
+    <li><a href="#s1">今日Triaで買い物したら、何税になるのか</a></li>
+    <li><a href="#s2">Triaを1回使うと、課税イベントは何回起きるのか</a></li>
+    <li><a href="#s3">還元6%の税引後リアル</a></li>
+    <li><a href="#s4">実測データ：手数料・還元・入金ルート</a></li>
+    <li><a href="#s5">「使う」vs「貸す」vs「持つ」の比較</a></li>
+    <li><a href="#s6">損益計算の実務手順</a></li>
+    <li><a href="#s7">向く人・向かない人</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+    <li><a href="#sources">出典一覧</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1">1. 今日Triaで買い物したら、何税になるのか</h2>
+
+<p>この記事を書いた理由がここです。「暗号資産の税金が20%になった」という記事は大量にありますが、<strong>「では今日カードで買い物したら何税なのか」に正確に答えている記事がほとんどありません。</strong>結論から整理します。</p>
+
+<h3>結論：2026年8月現在は雑所得・総合課税</h3>
+
+<p>暗号資産を売却または使用することで生じた利益は、事業所得等に付随する場合を除き、<strong>原則として雑所得に区分され、確定申告が必要</strong>とされています（国税庁）。ここでの「使用」には、商品やサービスの決済に充てた場合が含まれます。つまり<strong>買い物をした瞬間に譲渡があったものとして扱われ、その時点の時価と取得価額の差額が所得になります。</strong></p>
+
+<p>雑所得は総合課税なので、給与所得と合算されます。所得税は累進で最大45%、これに住民税10%が加わるため、<strong>合計で最大約55%</strong>になり得ます。</p>
+
+<h3>「一律20%の分離課税」はいつから？</h3>
+
+<p>令和8年度税制改正により、暗号資産取引への申告分離課税（所得税15%＋住民税5%＝20%、復興特別所得税を含めると20.315%）の導入が定められ、改正所得税法は<strong>2026年3月31日に成立</strong>しています。3年間の繰越控除制度も併せて創設されます。</p>
+
+<p>ただし重要なのは適用時期です。<strong>適用開始は金融商品取引法改正の施行翌年の1月1日以降</strong>とされており、<strong>2028年1月が有力</strong>とみられています。暗号資産が資金決済法上の「決済手段」から金商法上の「金融商品」へ位置づけを変える改正が先に施行される必要があるためです。</p>
+
+<div class="warn">
+  <strong>見落とされがちな論点：決済損益は分離課税の対象に入るのか？</strong><br>
+  税制改正大綱では、分離課税の対象が<strong>「国民の資産形成に資する暗号資産」</strong>に限定され、現物取引・デリバティブ取引・ETFから生じる所得が対象と示されています。<strong>日常の買い物に使ったことで生じた損益がこの範囲に含まれるかは、現時点で明確ではありません。</strong>対象外と整理された場合、2028年以降もカード決済分だけは雑所得・総合課税のまま残る可能性があります。政令・省令および国税庁の解釈が出るまで確定しません。
+</div>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>時期</th><th>カード決済で生じた損益の扱い</th><th>税率の目安</th><th>損失の繰越</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>2026年8月（現在）</td><td>雑所得・総合課税</td><td class="num">最大 約55%</td><td>不可</td></tr>
+    <tr><td>2027年（見込み）</td><td>雑所得・総合課税のまま</td><td class="num">最大 約55%</td><td>不可</td></tr>
+    <tr><td>2028年1月以降<br>（適用開始見込み）</td><td><strong>対象になれば</strong>申告分離課税<br><strong>対象外なら</strong>雑所得のまま</td><td class="num">20.315% ／ 最大 約55%</td><td>3年間（分離課税分）</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tablenote">出典：令和8年度税制改正関連報道および税理士事務所の解説（2026年8月2日参照）。施行時期は今後変わり得ます。</p>
+
+<h2 id="s2">2. Triaを1回使うと、課税イベントは何回起きるのか</h2>
+
+<p>ここも他の記事があまり分解していない部分です。「決済したら課税」とだけ書かれがちですが、実際には入口から出口まででイベントが複数回発生します。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>段階</th><th>課税イベント</th><th>所得区分（原則）</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>① 国内取引所で暗号資産を購入</td><td>発生しない（取得価額が確定するだけ）</td><td>—</td></tr>
+    <tr><td>② Triaウォレットへ送金</td><td>原則発生しない（自己の資産の移動）<br><small>※送金手数料分の資産減少の扱いは要確認</small></td><td>—</td></tr>
+    <tr><td>③ 保有資産をUSDC等へ変換</td><td><strong>発生する</strong>（暗号資産同士の交換は譲渡）</td><td>雑所得</td></tr>
+    <tr><td>④ カードで決済</td><td><strong>発生する</strong>（使用＝譲渡）</td><td>雑所得</td></tr>
+    <tr><td>⑤ 米ドル建て資産の円換算差</td><td><strong>発生する</strong>（為替差損益）</td><td>雑所得</td></tr>
+    <tr><td>⑥ キャッシュバックを受領</td><td><strong>発生し得る</strong>（受領時時価が所得）<br><small>※取扱いに論点あり。下記参照</small></td><td>雑所得（論点あり）</td></tr>
+    <tr><td>⑦ オンチェーン運用の報酬受領</td><td><strong>発生する</strong>（受領時時価が所得）</td><td>雑所得</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>つまり「1回の買い物」でも③④⑤が同時に動きます。</strong>月20回使えば年間で数百件の記録対象が生まれる計算です。これがクリプトカードの本当のコストで、還元率の比較表には決して出てきません。</p>
+
+<div class="warn">
+  <strong>⑥キャッシュバックの取扱いには論点があります。</strong>日本の一般的なポイント還元は「値引き」として扱われ課税対象外とされるのが通例ですが、<strong>暗号資産で還元を受ける場合は同じ整理が当てはまるとは限りません。</strong>受領時の時価で所得と認識する考え方が有力とみられますが、明確な公式見解は確認できませんでした。還元額が大きくなる場合は税理士への確認を強く推奨します。
+</div>
+
+<h2 id="s3">3. 還元6%の税引後リアル</h2>
+
+<p>「最大6%キャッシュバック」は確かに高い数字です。ただしこの6%には<strong>2つの条件</strong>が付きます。ここを外すと計算が全く合いません。</p>
+
+<h3>条件1：6%は最上位プランのみ。しかも月額上限がある</h3>
+
+<p>「最大6%」は全プラン共通ではありません。公式のSeason 3の記載では以下のとおりです。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>プラン</th><th>基本還元率</th><th>月額の適用上限</th><th>上限超過後</th><th>年会費</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Virtual</td><td class="num">1.5%</td><td class="num">月 $100 まで</td><td class="num">0.5%</td><td class="num">$25</td></tr>
+    <tr><td>Signature</td><td class="num">4.5%</td><td class="num">月 $1,000 まで</td><td class="num">1%</td><td class="num">$109</td></tr>
+    <tr><td>Premium</td><td class="num">6%</td><td class="num">月 $2,000 まで</td><td class="num">1%</td><td class="num">$250</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tablenote">還元率と上限の出典：Tria公式ブログ「Season 3 Membership and Cashback Updates」（2026年8月2日参照）。年会費の出典：CoinChoice（2026年2月4日）。</p>
+
+<p><strong>つまり「6%」を得るには年会費250ドルのPremiumが必要で、しかも月2,000ドルを超えた分は1%に落ちます。</strong>「最大6%」という表示だけを見て、年会費の安いプランでも6%が付くと考えると計算が狂います。</p>
+
+<div class="warn">
+  <strong>公式情報に食い違いがあります。</strong>上記のSeason 3ページは月額上限とフロアレートを明記していますが、Triaヘルプセンターの「Cashback General Information」には<strong>「Cashback earnings are currently uncapped（現在キャッシュバックに上限はない）」</strong>と記載されており、同時に「将来的に制限が導入される可能性がある」とも書かれています（いずれも2026年8月2日参照）。<strong>どちらが現在の運用かは公式に確認してください。</strong>本記事は保守的に、上限ありのSeason 3の記載を前提に計算しています。
+</div>
+
+<h3>条件2：受け取るまでに最大90日かかる</h3>
+
+<p>公式ヘルプセンターによれば、キャッシュバックは<strong>取引が完全に確定（fully settled）してから</strong>付与され、チャージバックを考慮して<strong>最大90日</strong>待つ場合があります。支払いは<strong>四半期ごと</strong>で、USDTまたはUSDCで行われます。本記事の実測でステータスが「保留」だったのはこのためです。</p>
+
+<h3>そのうえで、雑所得課税で手取りがいくら減るか</h3>
+
+<p>雑所得として総合課税された場合、手取りは税率区分によって変わります。<strong>還元率を額面のまま他のクレジットカードと比較するのは誤りです。</strong></p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>課税所得</th><th>所得税＋住民税</th><th>表示6%の手取り</th><th>年100万円利用時の手取り額</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>195万円超 330万円以下</td><td class="num">20%</td><td class="num">4.80%</td><td class="num">48,000円</td></tr>
+    <tr><td>330万円超 695万円以下</td><td class="num">30%</td><td class="num">4.20%</td><td class="num">42,000円</td></tr>
+    <tr><td>695万円超 900万円以下</td><td class="num">33%</td><td class="num">4.02%</td><td class="num">40,200円</td></tr>
+    <tr><td>900万円超 1,800万円以下</td><td class="num">43%</td><td class="num">3.42%</td><td class="num">34,200円</td></tr>
+    <tr><td>1,800万円超 4,000万円以下</td><td class="num">50%</td><td class="num">3.00%</td><td class="num">30,000円</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tablenote">前提：還元が雑所得として総合課税される場合の単純計算。復興特別所得税は考慮していません。実際の税率は他の所得と合算して決まります。</p>
+
+<h3>年会費と実測手数料まで引くと、いくら残るのか</h3>
+
+<p>ここが本記事の核心です。還元率から<strong>税・年会費・実測手数料をすべて差し引いた</strong>手取りを、プラン別に計算します。</p>
+
+<p>前提：年間利用100万円（月約83,000円＝約$532）／課税所得900万円超（税率43%）／オールイン実効コスト<strong>1.444%</strong>（<a href="#s4">実測値</a>）／1ドル=156.71円。この利用額は各プランの月額上限内に収まるため、基本還元率がそのまま適用されます。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>プラン</th><th>還元（額面）</th><th>雑所得課税43%</th><th>年会費</th><th>実効手数料1.444%</th><th>差引</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Virtual（1.5%）</td><td class="num">+6,881</td><td class="num">−2,959</td><td class="num">−3,918</td><td class="num">−14,440</td><td class="num"><strong>−14,436円</strong></td></tr>
+    <tr><td>Signature（4.5%）</td><td class="num">+45,000</td><td class="num">−19,350</td><td class="num">−17,081</td><td class="num">−14,440</td><td class="num"><strong>−5,871円</strong></td></tr>
+    <tr><td>Premium（6.0%）<br><small>※本記事の計測はこのプラン</small></td><td class="num">+60,000</td><td class="num">−25,800</td><td class="num">−39,178</td><td class="num">−14,440</td><td class="num"><strong>−19,418円</strong></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="warn">
+  <strong>年間100万円の利用では、どのプランを選んでも赤字になります。</strong><br><br>
+  理由は単純です。<strong>手数料1.444%は確実に出ていくコストなのに対し、還元は43%課税されて目減りする</strong>ためです。最上位のPremiumでも還元6%は税引後3.42%まで落ち、そこから年会費（年$250＝約39,000円）と手数料を引くと残りません。<br><br>
+  「最大6%キャッシュバック」という表示だけで判断すると、この構造を見誤ります。
+</div>
+
+<h3>では、いくら使えば黒字になるのか</h3>
+
+<p>年会費は固定費なので、利用額が増えるほど1円あたりの負担は薄まります。<strong>税率43%の場合の損益分岐点</strong>を計算しました。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>プラン</th><th>損益分岐となる年間利用額</th><th>月あたり</th><th>月額上限との関係</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Virtual</td><td colspan="3"><strong>到達不能</strong>（月$100超の分が0.5%に落ちるため、税引後に手数料を上回らない）</td></tr>
+    <tr><td>Signature（4.5%）</td><td class="num">約 152万円</td><td class="num">約 127,000円</td><td>上限内（月$1,000＝約157,000円）</td></tr>
+    <tr><td>Premium（6.0%）</td><td class="num">約 198万円</td><td class="num">約 165,000円</td><td>上限内（月$2,000＝約313,000円）</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="tablenote">税率43%・実効手数料1.444%・1ドル=156.71円での試算。税率が下がれば分岐点も下がります（例：税率20%区分ならより少ない利用額で黒字化します）。</p>
+
+<p><strong>結論として、Triaで金銭的に得をするには「年間150万円前後以上を、このカードに集中させる」ことが条件になります。</strong>月に10万円強を必ずこのカードで払う人でなければ、年会費と手数料が還元を食い切ります。<strong>また税率が高い人ほど不利になる</strong>という、直感に反する構造がある点にも注意してください。</p>
+
+<div class="warn">
+  <strong>一般的なクレジットカードとの比較。</strong>日本のクレジットカードのポイント還元は<strong>「値引き」として扱われ課税対象外</strong>とされるのが通例です。還元率1%のカードなら年間100万円の利用で1万円が<strong>非課税で</strong>残ります。上の表のとおりTriaはこの利用額帯で赤字なので、<strong>単純な損得では普通のクレジットカードが勝ちます。</strong>
+</div>
+
+<p><strong>ではTriaに意味がないかというと、そうではありません。比較対象を間違えないことが重要です。</strong>すでに暗号資産を保有していてそれを使いたい場合、代替手段は「国内取引所で売却して日本円にする」ことになりますが、<strong>その売却自体も課税イベントであり、送金と着金の手間も発生します。</strong>したがって現実の選択は「Tria vs 一般クレカ」ではなく<strong>「Tria vs 取引所で売却してから使う」</strong>です。この比較なら、手間と時間の差でTriaが有利になる場面があります。<strong>Triaの価値は還元率ではなく利便性にある</strong>と考えるのが、実測値から導かれる妥当な結論です。</p>
+
+<h2 id="s4">4. 実測データ：手数料・還元・入金ルート</h2>
+
+<h3>4-1. 公表値（出典と時点つき）</h3>
+
+<p>まず第三者が公表している数値を、出典と参照時点を明記して整理します。<strong>「最大」表示の数値をそのまま実コストと考えないでください。</strong></p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>項目</th><th>公表値</th><th>出典・時点</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>キャッシュバック</td><td>Virtual 1.5%（月$100まで、超過後0.5%）<br>Signature 4.5%（月$1,000まで、超過後1%）<br>Premium 6%（月$2,000まで、超過後1%）</td><td>Tria公式ブログ Season 3（2026年8月2日参照）</td></tr>
+    <tr><td>還元の支払い時期</td><td>四半期ごと。取引確定まで最大90日</td><td>Triaヘルプセンター（2026年8月2日参照）</td></tr>
+    <tr><td>還元の支払い通貨</td><td>USDT または USDC</td><td>Triaヘルプセンター（2026年8月2日参照）</td></tr>
+    <tr><td>年会費 Virtual</td><td>25ドル/年</td><td>CoinChoice（2026年2月4日）</td></tr>
+    <tr><td>年会費 Signature</td><td>109ドル/年</td><td>CoinChoice（2026年2月4日）</td></tr>
+    <tr><td>年会費 Premium</td><td>250ドル/年</td><td>CoinChoice（2026年2月4日）</td></tr>
+    <tr><td>為替手数料（非USD）</td><td>最大3%</td><td>CoinChoice（2026年2月4日）</td></tr>
+    <tr><td>クロスボーダー手数料</td><td>0%</td><td>CoinChoice（2026年2月4日）</td></tr>
+    <tr><td>ATM出金手数料</td><td>最大 3% ＋ 2ドル/回</td><td>CoinChoice（2026年2月4日）</td></tr>
+    <tr><td>対応チェーン／トークン</td><td>200以上／1,000以上</td><td>Tria公式サイト（2026年8月2日参照）</td></tr>
+    <tr><td>利用可能国</td><td>150か国以上</td><td>Tria公式サイト（2026年8月2日参照）</td></tr>
+    <tr><td>オンチェーン利回り</td><td>最大15% APY</td><td>Tria公式サイト（2026年8月2日参照）</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p class="src">※年会費・手数料は変更され得ます。申込前に必ず公式サイトの最新表示をご確認ください。上記は本サイトが独自に検証したものではなく、出典元の記載を転記したものです。</p>
+
+<h3>4-2. 実測値（実際の取引明細から検証）</h3>
+
+<p>ここが本サイトが他と違う部分です。<strong>公表されている「最大◯%」ではなく、実際に日本で決済して何円かかったかを取引明細から検証しています。</strong></p>
+
+<h4>計測した取引</h4>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>項目</th><th>明細の表示</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>日時</td><td>2026年8月1日 12:33</td></tr>
+    <tr><td>加盟店</td><td>Mobile Suica（モバイルSuicaへのチャージ）</td></tr>
+    <tr><td>決済額</td><td class="num">2,000円</td></tr>
+    <tr><td>適用為替レート</td><td class="num">1 USD = 156.71 JPY</td></tr>
+    <tr><td>Visa手数料</td><td class="num">1%</td></tr>
+    <tr><td>Tria手数料</td><td class="num">0.50%（1%から割引適用）</td></tr>
+    <tr><td>Visa固定手数料</td><td class="num">$0（$0.15が免除）</td></tr>
+    <tr><td><strong>実際の請求額</strong></td><td class="num"><strong>$12.89</strong></td></tr>
+    <tr><td>キャッシュバック</td><td class="num">$0.83（ステータス：保留）</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h4>検証1：表示された手数料の合計と、実際の請求額が合わない</h4>
+
+<p>まず素の金額を出します。2,000円 ÷ 156.71 = <strong>$12.7624</strong>。実際の請求は$12.89なので、上乗せは$0.1276、つまり<strong>ちょうど1.000%</strong>です。</p>
+
+<p>ところが明細に表示されている手数料は<strong>Visa 1% ＋ Tria 0.50% ＝ 合計1.5%</strong>。1.5%なら請求額は$12.95になるはずで、合いません。</p>
+
+<h4>検証2：差の0.5%は為替レートに埋め込まれていた</h4>
+
+<p>そこで適用レート156.71円を市場実勢と比べます。同日のUSD/JPYは<strong>157.40円</strong>でした（Yahoo Finance, JPY=X）。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>比較</th><th>数値</th><th>意味</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>市場レート</td><td class="num">157.40 円/USD</td><td>—</td></tr>
+    <tr><td>Tria適用レート</td><td class="num">156.71 円/USD</td><td>—</td></tr>
+    <tr><td><strong>レートの乖離</strong></td><td class="num"><strong>−0.438%</strong></td><td>利用者に不利な方向。<strong>Tria手数料0.50%とほぼ一致</strong></td></tr>
+    <tr><td>明細上の上乗せ</td><td class="num">+1.000%</td><td>Visa手数料1%と一致</td></tr>
+    <tr><td><strong>オールイン実効コスト</strong></td><td class="num"><strong>+1.444%</strong></td><td>市場レート基準の総コスト</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>つまり内訳は正しく、Tria手数料0.50%は明細の請求額に加算されるのではなく、為替レートそのものに内包されていました。</strong>手数料の行だけを足しても実際のコストは出ません。<strong>「適用レート×請求額」を市場レートと突き合わせないと、本当のコストは見えない</strong>ということです。</p>
+
+<div class="warn">
+  <strong>この0.438%という数値の精度について。</strong>2026年8月1日は土曜日で為替市場は休場です。参照した157.40円は薄商いの値であり、平日の実勢とは差があり得ます。<strong>したがって「レート乖離0.438%」は概算です。</strong>一方、<strong>「適用レート基準で1.000%」は明細だけで完結する確定値</strong>です。この2つは精度が違う数字として区別してください。継続計測して更新します。
+</div>
+
+<h4>検証3：キャッシュバックは「保留」で計上された</h4>
+
+<p>この決済に対して、明細上は<strong>$0.83</strong>のキャッシュバックが計上されました。ただしステータスは<strong>「保留」</strong>で、確定額ではありません。</p>
+
+<div class="warn">
+  <strong>この1件から還元率を断定することはしません。</strong>還元率は加入プランや適用中の優遇条件によって変わり、<strong>本計測は1件のみの観測</strong>です。加えて公式ヘルプセンターによれば、キャッシュバックは取引が完全に確定してから付与され、チャージバックを考慮して<strong>最大90日</strong>かかる場合があり、支払いは<strong>四半期ごと</strong>です。<strong>確定額と着金日が判明し次第、本セクションを更新します。</strong><br><br>
+  本記事の採算試算（<a href="#s3">セクション3</a>）では、この観測値ではなく<strong>公式が公表しているプラン別の還元率</strong>を使っています。
+</div>
+
+<p class="tablenote">※ 本計測は最上位プラン（Premium、基本還元6%）の環境下で行いました。下位プランでは還元率も月額上限も下がります。</p>
+
+<h4>まだ計測できていない項目</h4>
+
+<p>誠実さのために、未計測の項目も明示します。以下は数値が取れ次第、追記します。</p>
+
+<ul>
+  <li>物理カードの申込から日本到着までの実日数</li>
+  <li>キャッシュバックの実着金日と確定額</li>
+  <li>ATM出金の実コスト</li>
+  <li>米ドル建て加盟店での決済（今回は円建て加盟店のみ）</li>
+  <li>平日（為替市場が開いている時間帯）でのレート乖離</li>
+</ul>
+
+<h3>4-3. 入金ルートで税金の重さが変わる：JPYC経由という選択</h3>
+
+<p>ここは他のどの記事にも書かれていない論点です。<strong>同じTriaを使っても、どうやってチャージしたかによって、確定申告の負担が劇的に変わります。</strong></p>
+
+<p>今回の計測では、<strong>JPYCをPolygonネットワークで取得し、USDCにスワップしてからTriaにチャージする</strong>というルートを使いました。このルートには税務上の明確な利点があります。</p>
+
+<h4>JPYCは「暗号資産」ではなく「電子決済手段」</h4>
+
+<p>JPYCは資金決済法上の<strong>電子決済手段</strong>に位置づけられます（発行者が日本のライセンスを取得済み）。日本円と1対1で連動し、発行価格と同額での償還を約するものです。個人の所得計算上は、暗号資産と同じ枠組みで<strong>雑所得</strong>として扱われます。</p>
+
+<h4>なぜ税負担が軽くなるのか</h4>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>段階</th><th>JPYC経由ルート</th><th>長期保有の暗号資産で決済した場合</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>取得</td>
+      <td>円でJPYCを取得。<strong>1対1なので取得価額が円で確定</strong></td>
+      <td>過去に取得。取得価額が古く、含み益が積み上がっている</td>
+    </tr>
+    <tr>
+      <td>スワップ<br>（→USDC）</td>
+      <td>譲渡として課税対象だが、JPYCは円と等価なので<strong>損益はほぼゼロ</strong>（価格乖離分のみ）</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>決済</td>
+      <td>USDC保有中のUSD/JPY変動分＝<strong>為替差損益のみ</strong>。スワップから決済までが短ければ極小</td>
+      <td><strong>取得時からの含み益が一気に実現</strong>。金額が大きくなりやすい</td>
+    </tr>
+    <tr>
+      <td>計算の手間</td>
+      <td>取得価額が円で明確なため<strong>単純</strong></td>
+      <td>総平均法での取得価額算定が必要で<strong>煩雑</strong></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>ポイントは、JPYCが円建てなので為替差損益が原則生じないことです。</strong>外貨建てのUSDCは取得時と利用時のレート差で為替差損益が発生しますが、JPYCにはそれがありません。したがって<strong>「円 → JPYC → USDC → 即決済」と回せば、課税対象になる利益をごく小さく抑えられます。</strong></p>
+
+<div class="warn">
+  <strong>誤解しないでください。「課税されない」わけではありません。</strong>スワップ時も決済時も課税イベントは発生します。減るのは<strong>課税される金額と計算の手間</strong>であって、申告義務そのものではありません。また、この整理は一般的な取扱いに基づくものです。金額が大きい場合や事業性が疑われる場合は、必ず税理士にご確認ください。
+</div>
+
+<h2 id="s5">5. 「使う」vs「貸す」vs「持つ」の比較</h2>
+
+<p>クリプトカード同士の比較記事は大量にありますが、<strong>「そもそも資産をどう置くのが得か」という軸の比較がほとんどありません。</strong>ここを整理します。</p>
+
+<h3>重要：税率は3つともほぼ同じ</h3>
+
+<p>まず誤解を解いておくと、<strong>カード還元もレンディング利息も、原則としてどちらも雑所得・総合課税です。</strong>したがって「税率が有利だからこちら」という判断はできません。2026年8月時点では、どちらも同じ累進税率が適用されます。</p>
+
+<h3>本当の違いは「何に対して率がかかるか」</h3>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>手段</th><th>率がかかる対象</th><th>年6万円得るのに必要な額</th><th>主なリスク・制約</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>使う</strong><br>（Tria 還元6%）</td>
+      <td>年間の<strong>支出額</strong></td>
+      <td class="num">支出 100万円</td>
+      <td>年会費・為替手数料が先に出ていく。決済ごとに損益計算が必要。支出を増やしても得にはならない</td>
+    </tr>
+    <tr>
+      <td><strong>貸す</strong><br>（レンディング 年5%と仮定）</td>
+      <td>預入<strong>元本</strong></td>
+      <td class="num">元本 120万円を1年拘束</td>
+      <td>貸付先の信用リスク（元本が返らない可能性）。途中解約の制限。利率は変動し得る</td>
+    </tr>
+    <tr>
+      <td><strong>持つ</strong><br>（円で保有）</td>
+      <td>—</td>
+      <td class="num">—</td>
+      <td>リターンはほぼゼロだが、課税イベントも計算作業も発生しない</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>この表の含意はシンプルです。</strong>還元は「もともとする予定だった支出」に対してのみ有効で、支出を増やして還元を取りに行くのは本末転倒です。一方レンディングは余剰資金の量で決まります。<strong>両者は競合しません。</strong>「支出分は還元で拾い、余剰資金は貸す」が構造的には整合的な組み合わせです。</p>
+
+<div class="warn">
+  <strong>ただし「持つ」の価値を過小評価しないでください。</strong>クリプトカードを使うと、年間数百件の損益計算という<strong>時間コスト</strong>が発生します。年4万円弱の税引後リターンのために年間数時間を使うなら、時給換算で割に合うかは各自の判断です。円で持つ選択肢には「計算しなくていい」という定量化されないメリットがあります。
+</div>
+
+<p class="tablenote">※ 本セクションのレンディング年5%は比較のための仮定値です。実際の利率はサービスにより異なり、変動します。</p>
+
+<h2 id="s6">6. 損益計算の実務手順</h2>
+
+<p>「税理士に相談を」で終わらせず、実際の手順まで書きます。</p>
+
+<h3>ステップ1：記録すべき項目を決める</h3>
+<p>決済1件ごとに以下を残します。後から遡って復元するのは極めて困難なので、<strong>使い始めた初日から記録してください。</strong></p>
+<ul>
+  <li>取引日時（できれば秒単位）</li>
+  <li>使用した暗号資産の銘柄と数量</li>
+  <li>その時点の円換算時価（レート取得元も記録）</li>
+  <li>取得価額（総平均法または移動平均法。<strong>一度選んだ方法は継続適用が原則</strong>）</li>
+  <li>決済額（現地通貨と円換算額の両方）</li>
+  <li>差し引かれた手数料</li>
+</ul>
+
+<h3>ステップ2：計算方法を選ぶ</h3>
+<p>暗号資産の取得価額の計算方法には<strong>総平均法</strong>と<strong>移動平均法</strong>があります。届出をしない場合は総平均法が法定評価方法となります。決済回数が多い場合、移動平均法は取引ごとの計算が必要で負担が大きくなります。</p>
+
+<h3>ステップ3：ツールに取り込む</h3>
+<p>クリプタクト等の損益計算ツールを使う場合、ウォレットアドレス連携で自動取得できることがあります。ただし<strong>事前に確認すべき点</strong>があります。</p>
+<ul>
+  <li>Triaが使用するチェーンに対応しているか（マルチチェーンで自動ルーティングされる場合、複数チェーンの履歴が必要）</li>
+  <li>カード決済に伴う内部振替が、二重計上されずに処理されるか</li>
+  <li>対応していない取引は手動でカスタムファイルを作る必要がある</li>
+</ul>
+
+<h3>ステップ4：申告要否を判断する</h3>
+<p>給与を1か所から受けている給与所得者で、給与・退職所得以外の所得の合計が<strong>年間20万円以下</strong>なら所得税の確定申告は不要です。ただし<strong>住民税の申告は別途必要</strong>で、この点を書いていない記事が多いので注意してください。また医療費控除等で確定申告をする場合は、20万円以下でも暗号資産の所得を含める必要があります。</p>
+
+<h2 id="s7">7. 向く人・向かない人</h2>
+
+<h3>向いている人</h3>
+<ul>
+  <li>すでに暗号資産を保有していて、国内取引所への売却（＝どのみち課税イベント）を経ずに使いたい人</li>
+  <li><strong>年間150万円前後以上をこのカードに集中させられる人</strong>（税率43%の場合。これ未満だと年会費と手数料が還元を食い切ります）</li>
+  <li>月額上限（Signature 月$1,000／Premium 月$2,000）の範囲に利用額が収まる人。超過分は1%に落ちるため、使いすぎても効率は上がりません</li>
+  <li>損益計算ツールを既に使っていて、記録の追加負担が小さい人</li>
+  <li>海外での利用が多く、クロスボーダー手数料0%の恩恵を受けられる人</li>
+</ul>
+
+<h3>向いていない人</h3>
+<ul>
+  <li><strong>確定申告を自分でやりたくない人。</strong>これが最大の判断軸です。決済回数に比例して作業量が増えます</li>
+  <li><strong>課税所得が高く、雑所得の税率が高い人。</strong>還元が課税で目減りする一方、手数料は課税と無関係に出ていくため、<strong>高所得者ほど不利になるという直感に反する構造</strong>があります</li>
+  <li><strong>年間の利用額が100万円程度以下の人。</strong>試算ではどのプランでも赤字になります</li>
+  <li>決済したその場で還元を受け取りたい人（確定まで最大90日、支払いは四半期ごと）</li>
+  <li>少額決済を日常的に多数行う人（1件あたりの還元額に対して記録コストが見合わない）</li>
+  <li>今すぐ物理カードが必要な人（日本への配送に相当の日数がかかる報告あり）</li>
+  <li>円でチャージしたい人（日本円の直接チャージには対応していません）</li>
+</ul>
+
+<div class="cta">
+  <p style="margin:0 0 4px"><strong>Triaのアクセスコード</strong></p>
+  <span class="code">OC8SX94740</span>
+  <p style="margin:4px 0 0"><small>登録時に必要です。下のリンクからだと自動入力されます。</small></p>
+  <a class="btn" href="https://app.tria.so/?accessCode=OC8SX94740" rel="nofollow sponsored noopener" target="_blank">Triaに登録する（コード自動入力）</a>
+  <small>
+    このリンク経由の登録により、当サイト運営者に紹介報酬が発生します。<br>
+    <strong>登録前に必ず本記事の税務セクションと手数料セクションを読み、ご自身の課税所得区分で採算が合うか確認してください。</strong>
+  </small>
+</div>
+
+<h2 id="faq">よくある質問</h2>
+
+<details>
+<summary>Triaカードで買い物をすると、2026年8月現在は何税になりますか？</summary>
+<p>原則として<strong>雑所得（総合課税）</strong>です。暗号資産を決済に使用した時点で「譲渡」があったものとして扱われ、使用時の時価と取得価額の差額が所得になります。給与所得と合算されるため、所得税と住民税を合わせた税率は最大で約55%になり得ます。よく報じられている「一律20%の申告分離課税」は令和8年度税制改正で法律上は成立していますが、適用開始は金融商品取引法改正の施行翌年1月1日以降とされ、2028年1月が有力とみられています。<strong>したがって2026年8月時点の取引には適用されません。</strong></p>
+</details>
+
+<details>
+<summary>2028年に分離課税20%が始まれば、カード決済の損益も20%になりますか？</summary>
+<p><strong>現時点では確定していません。</strong>令和8年度税制改正大綱では分離課税の対象が「国民の資産形成に資する暗号資産」に限定されると示されており、対象は現物取引・デリバティブ取引・ETFから生じる所得が中心とされています。日常的な決済に使用したことで生じる損益がこの範囲に含まれるかは、今後の政令・省令や国税庁の解釈を待つ必要があります。対象外と整理された場合、2028年以降も決済分だけは雑所得のまま総合課税となる可能性が残ります。</p>
+</details>
+
+<details>
+<summary>USDCなどのステーブルコインで決済すれば課税されませんか？</summary>
+<p>課税されないわけではありません。USDCは米ドル建てであり円建てではないため、取得した時点と使用した時点の為替レートの差が<strong>為替差損益</strong>として発生します。個人の場合これは雑所得に区分されます。1USDC=1USDに固定されていても、1ドルの円換算額は日々動くため、円ベースでは損益が出ます。価格変動の幅はビットコイン等より小さいものの、課税イベント自体は発生します。</p>
+</details>
+
+<details>
+<summary>キャッシュバック6%は税引後だと実質何%になりますか？</summary>
+<p>受け取ったキャッシュバックが雑所得として総合課税された場合、課税所得695万円超900万円以下の区分（33%）なら<strong>実質約4.0%</strong>、課税所得900万円超1,800万円以下の区分（43%）なら<strong>実質約3.4%</strong>になります。ここからさらに年会費と為替手数料が引かれます。ただし暗号資産で受け取るキャッシュバックの課税上の取扱いには論点があり、通常のポイント還元のような値引き処理とは異なる扱いになる可能性があります。金額が大きくなる場合は税理士への確認を推奨します。</p>
+</details>
+
+<details>
+<summary>キャッシュバックはいつ受け取れますか？</summary>
+<p><strong>すぐには受け取れません。</strong>公式ヘルプセンターによれば、キャッシュバックは取引が完全に確定してから付与され、チャージバックを考慮して<strong>最大90日</strong>かかる場合があります。支払いは<strong>四半期ごと</strong>で、USDTまたはUSDCで行われます。</p>
+<p>本サイトの実測でも、決済直後の明細ではステータスが<strong>「保留」</strong>であり、確定額ではありませんでした。決済したその場でポイントが付くクレジットカードとは感覚が異なる点に注意してください。</p>
+</details>
+
+<details>
+<summary>確定申告は必ず必要ですか？20万円以下なら不要と聞きましたが。</summary>
+<p>給与を1か所から受けている給与所得者で、給与所得・退職所得以外の所得の合計が年間20万円以下であれば、<strong>所得税の</strong>確定申告は不要とされています。ただしこれは所得税の話であり、<strong>住民税の申告は別途必要</strong>です。また医療費控除やその他の理由で確定申告をする場合は、20万円以下であっても暗号資産の所得を含めて申告する必要があります。</p>
+</details>
+
+<details>
+<summary>決済のたびに損益計算が必要だと、実務上どれくらい大変ですか？</summary>
+<p>決済1回ごとに課税イベントが発生するため、月20回使えば年間240件の記録が必要になります。記録すべきは日時、使用した暗号資産の銘柄と数量、その時点の円換算時価、取得価額、決済額です。クリプタクト等の損益計算ツールにウォレットアドレスを連携すれば自動取得できる場合がありますが、対応チェーンやカード決済特有の内部振替の扱いは事前に確認が必要です。<strong>少額決済を日常的に行うほど負担が増える構造</strong>になっています。</p>
+</details>
+
+<details>
+<summary>還元6%のクリプトカードと年利5%のレンディング、どちらが得ですか？</summary>
+<p>税率は原則としてどちらも雑所得・総合課税で同じため、税引後の差は表面利率の差にほぼ比例します。<strong>判断を分けるのは税率ではなく、率がかかる対象です。</strong>還元は「支出額」に対して付き、レンディングは「預入元本」に対して付きます。年間100万円を使う人の6%還元は6万円ですが、同じ6万円をレンディング5%で得るには120万円の元本を1年間拘束する必要があります。一方でレンディングには貸付先の信用リスクと途中解約制限があり、還元には年会費と為替・変換手数料がかかります。どちらが有利かは支出額と余剰資金額の比率で決まり、<strong>両者は競合しないため併用も合理的です。</strong></p>
+</details>
+
+<details>
+<summary>Triaの年会費はいくらですか？</summary>
+<p>第三者メディアの2026年2月時点の記載では、Virtual（バーチャルのみ）が年25ドル、Signature（物理＋デジタル）が年109ドル、Premium（メタル＋デジタル）が年250ドルとされています。<strong>料金体系は変更される可能性があるため、申込前に必ず公式サイトの最新表示を確認してください。</strong>年会費は還元額から差し引いて実質還元率を計算する必要があります。</p>
+</details>
+
+<details>
+<summary>手数料は具体的にいくらかかりますか？</summary>
+<p>第三者メディアの記載によれば、米ドル以外の通貨での決済には<strong>最大3%</strong>の為替手数料、ATM出金には<strong>3%＋2ドル</strong>程度の手数料がかかるとされています。またウォレット内資産をUSDCへ変換する際にルーティングコストが発生する場合があります。いずれも「最大」表示であり、実際のコストは通貨・国・経路によって変動します。日本円建ての支払いでは為替手数料が実質的に上乗せされるため、表示還元率から差し引いて考える必要があります。</p>
+</details>
+
+<details>
+<summary>物理カードは日本にどれくらいで届きますか？</summary>
+<p>複数の日本語レビューでは、日本への配送に<strong>8〜12週間程度</strong>かかったという報告があります。すぐに使い始めたい場合はバーチャルカードを先に発行する運用が現実的です。当サイトの実測値は<a href="#s4">手数料セクション</a>に記載しています。</p>
+</details>
+
+<details>
+<summary>日本に住んでいてもTriaは使えますか？</summary>
+<p><strong>本サイトは特定個人の利用可否を保証するものではありません。</strong>暗号資産関連サービスの日本居住者向け提供可否は、資金決済法および金融商品取引法上の登録状況により変わり得ます。申込前に必ず公式の利用規約と対象国の記載をご自身で確認してください。また<strong>日本円で直接チャージすることはできず</strong>、国内取引所で暗号資産を購入してから送金する手順が必要になります。</p>
+</details>
+
+<details>
+<summary>アクセスコードとは何ですか？入力すると何が変わりますか？</summary>
+<p>Triaはベータ提供のため、登録時にアクセスコードの入力が必要です。コード付きのリンクから登録すると自動で入力された状態になります。コードにより待機列をスキップでき、キャッシュバック優遇の対象になるとされています。<strong>なおコードを発行した紹介者側にも報酬が入る仕組みのため、コードを掲載しているサイトは基本的に紹介報酬を得る立場にあります。本サイトも同様です。</strong>この点を明示していない紹介サイトの記載は、割り引いて読むことをおすすめします。</p>
+</details>
+
+<details>
+<summary>損失が出た場合、他の所得と相殺できますか？</summary>
+<p>2026年8月現在、暗号資産の損失は<strong>雑所得内の他の雑所得としか通算できず</strong>、給与所得や事業所得とは損益通算できません。また翌年以降への繰越控除もできません。令和8年度税制改正では3年間の繰越控除制度の創設が示されていますが、これも分離課税の適用開始と同じタイミングとなる見込みです。</p>
+</details>
+
+<details>
+<summary>オンチェーンで運用しながらカードを使うと税金はどうなりますか？</summary>
+<p>課税イベントが複数重なります。運用による報酬を受け取った時点で受領時時価が所得となり、その資産を決済に使用した時点で改めて譲渡損益が発生します。さらに運用先のプロトコルでトークンの交換が挟まる場合、その交換自体も課税対象になり得ます。<strong>利回りが高いほど計算対象の取引件数が増える</strong>ため、事前に記録方法を決めておくことを推奨します。</p>
+</details>
+
+<details>
+<summary>Triaの手数料は実際に何%かかりましたか？</summary>
+<p>2026年8月1日に日本で2,000円の決済を行い、取引明細から検証しました。適用為替レートは<strong>1USD=156.71円</strong>、実際の請求額は<strong>$12.89</strong>。2,000円÷156.71＝$12.7624なので、明細上の上乗せは<strong>ちょうど1.000%</strong>です。</p>
+<p>一方、明細に表示されていた手数料は<strong>Visa 1%＋Tria 0.50%＝合計1.5%</strong>で、数字が合いません。理由は、<strong>Tria手数料0.50%が請求額への加算ではなく為替レートに内包されていた</strong>ためです。同日の市場レート157.40円と比べると適用レートは0.438%不利で、これがTria手数料0.50%にほぼ一致します。市場レート基準の<strong>オールイン実効コストは1.444%</strong>でした。<strong>手数料の表示行を足すだけでは実際のコストは分かりません。</strong></p>
+</details>
+
+<details>
+<summary>JPYC経由でTriaにチャージすると税金は変わりますか？</summary>
+<p><strong>課税される金額と計算の手間が大きく変わります。</strong>JPYCは資金決済法上の<strong>電子決済手段</strong>で、日本円と1対1で連動します。円でJPYCを取得した時点で取得価額が円で確定し、<strong>円建てのため為替差損益が原則生じません。</strong></p>
+<p>JPYCをUSDCにスワップする時点で譲渡として課税対象になりますが、JPYCは円と等価なので損益はほぼゼロです。その後USDCで決済するまでの間に生じるUSD/JPYの変動分だけが為替差損益となるため、<strong>スワップから決済までが短ければ課税対象額は極小</strong>になります。</p>
+<p>これに対し、数年前に取得した暗号資産をそのまま決済に使うと、取得時からの含み益が一括で実現し、金額も計算の手間も大きくなります。<strong>ただし課税イベント自体は発生するため、申告義務がなくなるわけではありません。</strong></p>
+</details>
+
+<details>
+<summary>結局、普通のクレジットカードと比べて得ですか？</summary>
+<p><strong>単純な損得では、一般的な1%還元のクレジットカードが勝ちます。</strong>実測のオールイン手数料1.444%を使い、年間100万円の利用、課税所得900万円超（税率43%）で計算すると、税引後の手取りは<strong>Virtualで−14,436円、Signatureで−5,871円、Premiumで−19,418円</strong>と、<strong>どのプランでも赤字</strong>になります。</p>
+<p>理由は、<strong>手数料1.444%が確実に出ていくコストである一方、還元は43%課税されて目減りする</strong>ためです。最上位のPremiumでも還元6%は税引後3.42%まで落ち、そこから年会費$250と手数料を引くと残りません。黒字化にはSignatureで年約152万円、Premiumで年約198万円の利用が必要です。日本のクレジットカードのポイント還元は値引きとして扱われ課税対象外とされるのが通例のため、1%還元のカードなら年100万円の利用で1万円が非課税で残ります。</p>
+<p><strong>ただし比較対象を間違えないでください。</strong>すでに暗号資産を保有していてそれを使いたい場合、代替手段は国内取引所での売却であり、<strong>その売却自体も課税イベントで、送金と着金の手間も発生します。</strong>実際の選択は「Tria対一般クレカ」ではなく<strong>「Tria対 取引所で売却してから使う」</strong>であり、この比較ならTriaの利便性が生きます。<strong>Triaの価値は還元率ではなく利便性にある</strong>と考えるのが妥当です。</p>
+</details>
+
+<details>
+<summary>この記事の情報はいつ時点のものですか？</summary>
+<p><strong>2026年8月1日時点</strong>で確認できた一次情報および第三者メディアの記載に基づいています。税制は令和8年度改正の施行時期が未確定な部分を含み、Triaの料金体系も変更され得ます。各セクションに出典と参照時点を明記していますので、判断の前に必ず最新の公式情報を確認してください。</p>
+</details>
+
+<h2 id="sources">出典一覧</h2>
+
+<ol class="sources">
+  <li>国税庁「暗号資産等に関する税務上の取扱い及び計算書について（令和7年12月）」<br><a href="https://www.nta.go.jp/publication/pamph/shotoku/kakuteishinkokukankei/kasoutuka/" rel="noopener" target="_blank">https://www.nta.go.jp/publication/pamph/shotoku/kakuteishinkokukankei/kasoutuka/</a>（2026年8月2日参照）</li>
+  <li>国税庁 タックスアンサー No.1525-2「NFTやFTを用いた取引を行った場合の課税関係」<br><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1525-2.htm" rel="noopener" target="_blank">https://www.nta.go.jp/taxes/shiraberu/taxanswer/shotoku/1525-2.htm</a>（2026年8月2日参照）</li>
+  <li>CoinPost「税制改正大綱で仮想通貨税制が大きく前進、申告分離課税20%と3年間の繰越控除を明記」<br><a href="https://coinpost.jp/?p=675108" rel="noopener" target="_blank">https://coinpost.jp/?p=675108</a>（2026年8月2日参照）</li>
+  <li>カオーリア会計事務所「暗号資産の分離課税化はいつから？｜令和8年度税制改正大綱のポイント」<br><a href="https://kaoria-tax.com/knowledge/separate-taxation/" rel="noopener" target="_blank">https://kaoria-tax.com/knowledge/separate-taxation/</a>（2026年8月2日参照）</li>
+  <li>カオーリア会計事務所「ステーブルコインの税金｜JPYC・USDCの課税関係と電子決済手段の税務」<br><a href="https://kaoria-tax.com/knowledge/stablecoin-tax/" rel="noopener" target="_blank">https://kaoria-tax.com/knowledge/stablecoin-tax/</a>（2026年8月2日参照）</li>
+  <li>あたらしい経済（カオーリア会計事務所 藤本剛平）「暗号資産払いデビットカード、使うと税金の計算が発生するって知ってる？」<br><a href="https://www.neweconomy.jp/features/cryptotax/540569" rel="noopener" target="_blank">https://www.neweconomy.jp/features/cryptotax/540569</a>（2026年8月2日参照）</li>
+  <li>So &amp; Sato「Crypto決済と日本法」<br><a href="https://innovationlaw.jp/crypto-payment-law/" rel="noopener" target="_blank">https://innovationlaw.jp/crypto-payment-law/</a>（2026年8月2日参照）</li>
+  <li>CoinChoice「Triaカードとは？年会費・手数料・ラウンジ・ATM・税金まで、メリット/デメリットと口コミを網羅解説」（2026年2月4日公開）<br><a href="https://coinchoice.net/tria-card-annual-fee-features-merits-demerits/" rel="noopener" target="_blank">https://coinchoice.net/tria-card-annual-fee-features-merits-demerits/</a>（2026年8月2日参照）</li>
+  <li>Tria 公式サイト<br><a href="https://tria.so/" rel="nofollow noopener" target="_blank">https://tria.so/</a>（2026年8月2日参照）</li>
+  <li>Tria公式ブログ「Season 3 Membership and Cashback Updates」— プラン別還元率と月額上限の出典<br><a href="https://www.tria.so/en/blogs/season-3-cashback-and-membership" rel="nofollow noopener" target="_blank">https://www.tria.so/en/blogs/season-3-cashback-and-membership</a>（2026年8月2日参照）</li>
+  <li>Tria ヘルプセンター「Cashback General Information」— 支払い時期・通貨・確定までの日数の出典<br><a href="https://help.tria.so/en/articles/13696877-cashback-general-information" rel="nofollow noopener" target="_blank">https://help.tria.so/en/articles/13696877-cashback-general-information</a>（2026年8月2日参照）</li>
+  <li>Yahoo Finance「USD/JPY（JPY=X）日足データ」— 本記事セクション4の市場レート比較に使用<br><a href="https://finance.yahoo.com/quote/JPY=X/" rel="noopener" target="_blank">https://finance.yahoo.com/quote/JPY=X/</a>（2026年8月2日参照。2026年8月1日終値 157.400）</li>
+  <li>本サイト運営者によるTria取引明細の実測（2026年8月1日 12:33 の決済1件）— セクション4-2</li>
+</ol>
+
+<div class="disclaimer">
+  <strong>免責事項</strong><br>
+  本記事は執筆時点で公開されている情報をもとにした<strong>一般的な情報提供</strong>であり、税務・法務・投資に関する助言ではありません。税務上の取扱いは個々の事情により異なり、また法令改正により変わります。実際の申告にあたっては必ず税理士等の専門家にご相談ください。<br><br>
+  本記事は特定の暗号資産・サービスの購入や利用を推奨するものではありません。暗号資産は価格変動により<strong>元本を割り込む可能性</strong>があります。サービスの日本居住者向け提供可否については、利用者ご自身で公式情報をご確認ください。<br><br>
+  本記事には紹介リンクが含まれ、経由した登録により運営者が報酬を受け取ります。記載内容の正確性には努めていますが、その完全性を保証するものではなく、本記事に基づく判断により生じたいかなる損害についても責任を負いかねます。
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>クリプトカード税務ラボ｜最終更新 2026年8月2日</p>
+    <p>本サイトはアフィリエイトプログラムに参加しており、紹介リンク経由の登録により報酬を受け取ります。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, k='theme';
+  try{ var s=localStorage.getItem(k); if(s) root.setAttribute('data-theme',s); }catch(e){}
+  var b=document.getElementById('tt');
+  if(b){ b.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){ cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light'; }
+    var next = cur==='dark' ? 'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem(k,next); }catch(e){}
+  }); }
+})();
+</script>
+
+</body>
+</html>
