@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triaをやめたくなったら、残高はいくらで日本円に戻せるのか？国内取引所を使った出口の手順とコスト【2026年8月版】</title>
+<meta name="description" content="クリプトカードの記事は「始め方」ばかりで「やめ方」が書かれていない。Tria残高を日本円に戻すには国内取引所が必須で、送金・売却・出金の各段階に別々の制約がある。GMOコインの公表手数料（暗号資産の送付無料／日本円出金無料／取引所現物Taker0.05%）、トラベルルールで送付できない相手、Pay-easy入金後7日間の送付制限、そして売却そのものが課税イベントになる点まで、出典と参照時点つきで整理した2026年8月版。">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<link rel="canonical" href="https://cryptotaxlab-design.github.io/tria-cashout/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://cryptotaxlab-design.github.io/tria-cashout/">
+<meta property="og:title" content="Triaをやめたくなったら、残高はいくらで日本円に戻せるのか？">
+<meta property="og:description" content="出口（現金化）のコストと制約を先に確認する。送金・売却・出金の3段階＋税金。GMOコインの公表値とトラベルルールの制約を出典つきで整理。">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Triaをやめたくなったら、残高はいくらで日本円に戻せるのか？",
+      "description": "クリプトカードの残高を日本円に戻す「出口」の手順とコストを、国内取引所の公表手数料・トラベルルールの制約・課税関係から整理したガイド。",
+      "inLanguage": "ja",
+      "datePublished": "2026-08-04",
+      "dateModified": "2026-08-04",
+      "author": { "@type": "Person", "name": "運営者" },
+      "publisher": { "@type": "Organization", "name": "クリプトカード税務ラボ" },
+      "about": [
+        { "@type": "Thing", "name": "暗号資産の現金化" },
+        { "@type": "Thing", "name": "クリプトカード" },
+        { "@type": "Thing", "name": "トラベルルール" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Triaの残高を直接、日本円で銀行口座に出金できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "できません。Triaは日本円での直接チャージに対応しておらず、逆方向、つまり残高を日本円として国内の銀行口座へ引き出す機能もありません。現金化するには、Tria残高を暗号資産として国内の暗号資産交換業者へ送付し、そこで日本円に売却し、日本円を銀行口座へ出金する、という3段階が必要です。したがってカードを作る前に、出口となる国内取引所の口座を先に用意しておくのが正しい順番になります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "クリプトカードの残高を現金化するのに、いくらかかりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "現金として出ていくコストと、税金として出ていくコストを分けて考える必要があります。現金コストは、送金時のネットワーク手数料、売却時のスプレッドまたは取引手数料、日本円の出金手数料の3つです。GMOコインの公表値では暗号資産の送付手数料と日本円の出金手数料はいずれも無料、取引所（現物）の取引手数料はBTC・ETH・XRP・DAIでMaker−0.01%／Taker0.05%、その他銘柄でMaker−0.03%／Taker0.09%とされています（2026年8月4日参照）。一方で販売所を使う場合は取引手数料が無料と表示されていても購入価格と売却価格の差、すなわちスプレッドが実質的なコストになります。そして最も大きいのは税金です。暗号資産を売却した時点で譲渡があったものとして扱われ、原則として雑所得・総合課税になります。手数料をすべて無料にしても、税負担は残ります。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どの国内取引所を選んでも同じですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "出口の観点では3点だけ確認すれば足ります。第一に日本円の出金手数料が無料かどうか。第二に暗号資産の送付（出庫）手数料が無料かどうか。第三に自分が送りたい銘柄とチェーンに対応しているかどうかです。還元キャンペーンや取扱銘柄数よりも、この3点のほうが実際に負担する金額に直結します。加えて、トラベルルールへの対応方式が業者ごとに異なるため、送付できる相手が業者によって違う点も確認が必要です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "トラベルルールで送金できないことがあるというのは本当ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "本当です。GMOコインの公表によれば、同社と異なるトラベルルール対応ソリューションを採用している国内の暗号資産交換業者には送付できないとされ、例としてbitFlyer、コインチェック、Crypto Garage、Binance Japanが挙げられています。また通知対象国・地域に所在する海外業者、例としてKraken、Coinbase、Gate.io、OKXなども送付できない先とされています。MetaMask等のプライベートウォレットへの送付は可能とされていますが、送付先に関する情報の確認結果によっては送付を断る場合があるとも明記されています。逆方向、つまり外部から預け入れる場合も、送付元からの通知事項と送付内容の確認が行われ、確認が完了するまで反映に時間がかかる場合や、反映できない場合があるとされています。国内取引所同士なら必ず送れる、という前提は成り立ちません。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "売却して日本円に戻すとき、税金はどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "暗号資産の売却は課税イベントであり、売却時の時価と取得価額の差額が所得になります。2026年8月時点では原則として雑所得・総合課税で、給与所得と合算されるため所得税と住民税を合わせて最大約55%になり得ます。注意すべきなのは、カードで決済した時点でも既に課税イベントが発生している点です。決済で使った分と、売却して日本円に戻した分は、それぞれ別の課税イベントとして計算します。二重課税ではなく、別々の取引として両方を記録する必要がある、ということです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "日本円の出金に最低金額はありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GMOコインの公表では、日本円出金の最低金額は10,000円／回とされています。受付は24時間365日、手数料は無料、着金は最短即時とされています。30,000,001円以上の大口出金は手数料400円で、上限は100,000,000円／日です（いずれも2026年8月4日参照）。少額の残高を細かく引き出す用途には向かない点に注意してください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "ネットワークを間違えて送るとどうなりますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "資産を失うおそれがあります。GMOコインは公式告知で、イーサリアムおよびERC-20規格の暗号資産を「Ethereum（ERC-20）」以外のネットワークで預入すると、取り出しができなくなり喪失してしまうおそれがあると明記しています。暗号資産の送付・預入は各銘柄が本来対応するチェーンで行う必要があり、送金元と送金先の双方で同じネットワークを選んでいるかを、送金前に必ず確認してください。少額でテスト送金してから本番の金額を送るのが安全です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "このページの情報は実際に試した結果ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。このページは各社が公表している情報を、出典と参照時点を明記して整理したものです。当サイトが実際に口座を開設して所要時間や手数料を計測したものではありません。当サイトが自分で計測した数値は、Triaカードの決済手数料に関するページに分けて掲載しており、そちらには実測である旨を明記しています。公表値は変更され得るため、手続きの前に必ず各社の最新表示をご確認ください。"
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#ffffff; --fg:#16181d; --muted:#5c6370; --line:#e3e6ec;
+  --card:#f7f8fa; --accent:#0b6bcb; --accent-fg:#ffffff;
+  --warn-bg:#fff8e1; --warn-line:#e6c200; --warn-fg:#5c4a00;
+  --ok-bg:#eef7ee; --ok-line:#3f9142;
+  --todo-bg:#fff0f0; --todo-line:#d64545; --todo-fg:#8a1f1f;
+  --maxw:820px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1216; --fg:#e6e8ec; --muted:#9aa3b2; --line:#262b33;
+    --card:#161a20; --accent:#4d9dff; --accent-fg:#0b1017;
+    --warn-bg:#2a2412; --warn-line:#8a7420; --warn-fg:#f0dfa0;
+    --ok-bg:#13241a; --ok-line:#3f9142;
+    --todo-bg:#2a1414; --todo-line:#c25555; --todo-fg:#ffb4b4;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1216; --fg:#e6e8ec; --muted:#9aa3b2; --line:#262b33;
+  --card:#161a20; --accent:#4d9dff; --accent-fg:#0b1017;
+  --warn-bg:#2a2412; --warn-line:#8a7420; --warn-fg:#f0dfa0;
+  --ok-bg:#13241a; --ok-line:#3f9142;
+  --todo-bg:#2a1414; --todo-line:#c25555; --todo-fg:#ffb4b4;
+}
+:root[data-theme="light"]{
+  --bg:#ffffff; --fg:#16181d; --muted:#5c6370; --line:#e3e6ec;
+  --card:#f7f8fa; --accent:#0b6bcb; --accent-fg:#ffffff;
+  --warn-bg:#fff8e1; --warn-line:#e6c200; --warn-fg:#5c4a00;
+  --ok-bg:#eef7ee; --ok-line:#3f9142;
+  --todo-bg:#fff0f0; --todo-line:#d64545; --todo-fg:#8a1f1f;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+  line-height:1.85; font-size:16px; overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px}
+header.site{border-bottom:1px solid var(--line); padding:14px 0; font-size:13px; color:var(--muted)}
+header.site .wrap{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap}
+.brand{font-weight:700; color:var(--fg); text-decoration:none}
+
+h1{font-size:1.9rem; line-height:1.45; margin:28px 0 14px; letter-spacing:.01em}
+h2{font-size:1.35rem; margin:48px 0 12px; padding-top:14px; border-top:2px solid var(--line); line-height:1.5}
+h3{font-size:1.1rem; margin:30px 0 10px; line-height:1.55}
+h4{font-size:1rem; margin:24px 0 8px; line-height:1.6; color:var(--accent)}
+p{margin:0 0 16px}
+a{color:var(--accent)}
+small{color:var(--muted)}
+ul,ol{padding-left:1.4em; margin:0 0 16px}
+li{margin-bottom:8px}
+
+.meta{font-size:13px; color:var(--muted); margin-bottom:20px}
+.pr-note{
+  background:var(--card); border:1px solid var(--line); border-radius:8px;
+  padding:12px 14px; font-size:13px; color:var(--muted); margin:0 0 24px;
+}
+.summary{
+  background:var(--ok-bg); border-left:4px solid var(--ok-line);
+  padding:18px 20px; border-radius:0 8px 8px 0; margin:0 0 28px;
+}
+.summary h2{border:none; margin:0 0 10px; padding:0; font-size:1.05rem}
+.summary ol{margin:0; padding-left:1.3em}
+.summary li{margin-bottom:10px}
+
+.warn{
+  background:var(--warn-bg); border-left:4px solid var(--warn-line); color:var(--warn-fg);
+  padding:14px 18px; border-radius:0 8px 8px 0; margin:20px 0; font-size:.95rem;
+}
+.warn strong{color:inherit}
+
+.todo{
+  background:var(--todo-bg); border:2px dashed var(--todo-line); color:var(--todo-fg);
+  padding:14px 18px; border-radius:8px; margin:20px 0; font-size:.95rem;
+}
+.todo b{display:block; margin-bottom:6px; letter-spacing:.03em}
+
+.tablewrap{overflow-x:auto; margin:20px 0; border:1px solid var(--line); border-radius:8px}
+table{border-collapse:collapse; width:100%; min-width:560px; font-size:.92rem}
+th,td{border-bottom:1px solid var(--line); padding:11px 13px; text-align:left; vertical-align:top}
+th{background:var(--card); font-weight:700; white-space:nowrap}
+th:first-child,td:first-child{min-width:8.5em}
+tr:last-child td{border-bottom:none}
+td.num{text-align:right; white-space:nowrap; font-variant-numeric:tabular-nums}
+.tablenote{font-size:.86rem; color:var(--muted); margin:-12px 0 20px; line-height:1.7}
+
+.cta{
+  background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:22px; margin:32px 0; text-align:center;
+}
+.cta .code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:1.5rem; font-weight:700;
+  letter-spacing:.12em; display:block; margin:10px 0 4px; word-break:break-all;
+}
+.btn{
+  display:inline-block; background:var(--accent); color:var(--accent-fg);
+  padding:13px 28px; border-radius:8px; text-decoration:none; font-weight:700;
+  margin-top:12px;
+}
+.btn:hover{opacity:.9}
+.cta small{display:block; margin-top:12px; line-height:1.6}
+
+details{border:1px solid var(--line); border-radius:8px; padding:0 16px; margin-bottom:10px; background:var(--card)}
+details summary{cursor:pointer; padding:14px 0; font-weight:700; line-height:1.6}
+details[open] summary{border-bottom:1px solid var(--line); margin-bottom:12px}
+details p:last-child{margin-bottom:16px}
+
+.src{font-size:.86rem; color:var(--muted); margin:8px 0 0}
+ol.sources{font-size:.9rem; color:var(--muted)}
+ol.sources a{word-break:break-all}
+
+footer.site{border-top:1px solid var(--line); margin-top:56px; padding:28px 0 60px; font-size:.86rem; color:var(--muted)}
+.disclaimer{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 18px; font-size:.87rem; color:var(--muted); margin:24px 0}
+
+#toc{background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin:24px 0}
+#toc strong{display:block; margin-bottom:8px}
+#toc ol{margin:0; padding-left:1.3em; font-size:.94rem}
+#toc li{margin-bottom:5px}
+
+.themebtn{
+  background:none; border:1px solid var(--line); color:var(--muted);
+  border-radius:6px; padding:5px 11px; cursor:pointer; font-size:12px; font-family:inherit;
+}
+@media (max-width:600px){
+  body{font-size:15.5px}
+  h1{font-size:1.5rem}
+  h2{font-size:1.2rem}
+  .wrap{padding:0 16px}
+}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">クリプトカード税務ラボ</a>
+    <button class="themebtn" id="tt" type="button">テーマ切替</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+<h1>Triaをやめたくなったら、<br>残高はいくらで日本円に戻せるのか？</h1>
+
+<p class="meta">公開：2026年8月4日／最終更新：2026年8月4日｜<strong>本ページは各社の公表情報を、出典と参照時点を明示して整理したものです。</strong></p>
+
+<div class="pr-note">
+  <strong>【PR・アフィリエイト表記】</strong>本記事には暗号資産交換業者およびTriaの紹介リンクを掲載しており、当サイト運営者は紹介報酬を受け取る場合があります。ただし報酬の有無によって記載内容を歪めないため、<strong>制約・コスト・詰まりやすい点についても同じ密度で記載しています。</strong>特定の業者を「最もお得」と断定する書き方はしていません。
+</div>
+
+<div class="warn">
+  <strong>先に、このページの性格をはっきりさせておきます。</strong><br><br>
+  ここに書いてあるのは<strong>公表値の整理であり、当サイトが実際に口座を開設して計測した数値ではありません。</strong>所要時間・スプレッド・着金日数などを「実測した」とは書きません。<br><br>
+  当サイトが自分で計測したのは<strong>Triaカードの決済手数料（オールイン実効コスト1.444%）だけ</strong>で、それは<a href="/#s4">別ページの実測セクション</a>に分けてあります。実測と公表値を混ぜないのが本サイトの方針です。
+</div>
+
+<div class="summary">
+  <h2>先に結論（3行）</h2>
+  <ol>
+    <li><strong>Triaは日本円で直接チャージできず、日本円として直接引き出すこともできません。</strong>入口も出口も国内の暗号資産交換業者が必要です。つまり<strong>カードを作る前に、出口側の口座を先に用意しておくのが正しい順番</strong>です。</li>
+    <li><strong>出口のコストは手数料だけではありません。</strong>①送金（チェーンとトラベルルールの制約）②売却（スプレッドまたは取引手数料）③日本円出金、の3段階があり、<strong>それぞれ別の理由で詰まります。</strong>手数料が全部無料の経路を選んでも、<strong>売却が課税イベントである以上、税金は必ず残ります。</strong></li>
+    <li><strong>取引所選びで出口に効くのは3点だけです。</strong>日本円の出金手数料／暗号資産の送付手数料／送りたいチェーンへの対応。取扱銘柄数やキャンペーンより、この3点のほうが負担額に直結します。</li>
+  </ol>
+</div>
+
+<nav id="toc">
+  <strong>目次</strong>
+  <ol>
+    <li><a href="#s1">なぜ「出口」を先に確認するのか</a></li>
+    <li><a href="#s2">出口の全体像：4つの段階と、それぞれ違う詰まり方</a></li>
+    <li><a href="#s3">段階1：Tria残高を国内取引所へ送る（最も詰まる）</a></li>
+    <li><a href="#s4">段階2：日本円に売る（販売所と取引所の差）</a></li>
+    <li><a href="#s5">段階3：日本円を銀行口座へ出金する</a></li>
+    <li><a href="#s6">段階4：税金（一番大きいコスト）</a></li>
+    <li><a href="#s7">では入口はどうするか：口座の選び方</a></li>
+    <li><a href="#s8">出口まで含めて、結局得なのか</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+    <li><a href="#sources">出典一覧</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1">1. なぜ「出口」を先に確認するのか</h2>
+
+<p>クリプトカードの記事は<strong>「始め方」ばかりです。</strong>申し込み手順、還元率の比較、チャージの方法。ところが<strong>「やめたくなったときに、残高をどうやって現金に戻すのか」を書いている記事がほとんどありません。</strong></p>
+
+<p>これは順序が逆です。<strong>出口の見通しが立っていない資産に、入口から資金を入れるべきではありません。</strong>特にクリプトカードの場合、出口は「解約ボタンを押す」では終わりません。カード残高は暗号資産として存在しているので、<strong>それを日本円に変える作業が別途必要</strong>になります。</p>
+
+<h3>Triaは日本円を直接扱わない</h3>
+
+<p>Triaは日本円での直接チャージに対応していません。入金するには国内の暗号資産交換業者で暗号資産を購入し、そこから送金する必要があります。<strong>そして逆方向も同じです。</strong>残高を日本円として国内の銀行口座へ引き出す機能はありません。</p>
+
+<p>したがって現金化は次の3段階になります。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>段階</th><th>やること</th><th>どこで</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>①送る</td><td>Tria残高を暗号資産として送付する</td><td>Tria → 国内取引所</td></tr>
+    <tr><td>②売る</td><td>暗号資産を日本円に売却する</td><td>国内取引所</td></tr>
+    <tr><td>③引き出す</td><td>日本円を銀行口座へ出金する</td><td>国内取引所 → 銀行</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>この3段階のすべてに国内取引所の口座が必要です。</strong>口座がないと、出口そのものが存在しません。</p>
+
+<div class="warn">
+  <strong>「あとで作ればいい」が通用しない理由。</strong><br><br>
+  口座開設には本人確認の審査があり、審査は必ずしも即日で終わるとは限りません。<strong>相場が急変して今すぐ現金化したい、というタイミングで口座開設から始めると間に合いません。</strong>また後述するとおり、<strong>入金方法によっては入金後7日間、暗号資産を送付できない制限がかかる場合があります。</strong>出口側の準備は、必要になる前に済ませておくものです。
+</div>
+
+<h2 id="s2">2. 出口の全体像：4つの段階と、それぞれ違う詰まり方</h2>
+
+<p>手数料の話に入る前に、<strong>「どこで詰まるか」を先に並べます。</strong>コストより先に、そもそも進めなくなるポイントを知っておくほうが重要だからです。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>段階</th><th>現金として出ていくコスト</th><th>詰まりやすい点</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>①送金<br>Tria→取引所</td>
+      <td>チェーンのネットワーク手数料（ガス代）。<br>受取側（取引所）の預入手数料は無料の場合が多い</td>
+      <td><strong>対応ネットワークの不一致で資産を失う</strong>／<strong>トラベルルールで送付・預入が通らない</strong>／取引所が当該銘柄を扱っていない</td>
+    </tr>
+    <tr>
+      <td>②売却</td>
+      <td>販売所ならスプレッド（表示は「手数料無料」でも実質コスト）。<br>取引所（板）なら取引手数料</td>
+      <td>板が薄い銘柄は不利な価格で約定する／指値が約定しない</td>
+    </tr>
+    <tr>
+      <td>③出金</td>
+      <td>日本円の出金手数料</td>
+      <td><strong>最低出金額を下回ると引き出せない</strong>／大口は別料金</td>
+    </tr>
+    <tr>
+      <td>④申告</td>
+      <td><strong>税金</strong>（雑所得・総合課税なら最大約55%）</td>
+      <td>取得価額が分からず計算できない／<strong>決済分と売却分の記録が別々に必要</strong></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>手数料の議論は①〜③、つまり表の上3行だけの話です。</strong>ところが実際に最も大きい金額が動くのは④です。ここを見ずに「送金無料・出金無料だから出口のコストはゼロ」と考えると、大きく外します。</p>
+
+<h2 id="s3">3. 段階1：Tria残高を国内取引所へ送る（最も詰まる）</h2>
+
+<p>ここが出口で一番難しい部分です。理由は2つあります。<strong>技術的な制約（チェーン）と、規制上の制約（トラベルルール）が、別々にかかる</strong>からです。</p>
+
+<h3>3-1. ネットワークを間違えると資産を失う</h3>
+
+<p>同じ銘柄でも、複数のチェーン上に存在することがあります。<strong>送る側と受け取る側で選んでいるネットワークが違うと、着金しません。</strong></p>
+
+<p>GMOコインは公式告知で、イーサリアムおよびERC-20規格の暗号資産について、<strong>「Ethereum（ERC-20）」以外のネットワークで預入すると「取り出しができなくなり喪失してしまうおそれ」がある</strong>と明記しています（2023年7月14日付告知）。BNB Smart Chain等の別ネットワークで送ってしまい残高に反映されなかった事例が挙げられています。</p>
+
+<p>同社の説明では、暗号資産の送付・預入は<strong>各銘柄が本来対応するチェーンで行う</strong>ものとされています（ビットコインならBitcoin、イーサリアムならEthereum（ERC-20）、XRPならXRP Ledger、といった具合です）。</p>
+
+<div class="warn">
+  <strong>送金前に必ず確認すること。</strong><br><br>
+  ① 送る銘柄を、受取側の取引所が<strong>取り扱っているか</strong><br>
+  ② その銘柄について、送る側と受け取る側が<strong>同じネットワークに対応しているか</strong><br>
+  ③ メモ・タグ（XRPのDestination Tag等）が必要な銘柄かどうか<br><br>
+  <strong>この3つが揃って初めて送金できます。</strong>そして金額が大きいときは、<strong>まず最小額でテスト送金して着金を確認してから本番の金額を送るのが安全です。</strong>ネットワークの誤りは、多くの場合取り返しがつきません。
+</div>
+
+<h3>3-2. トラベルルール：送れない相手が実在する</h3>
+
+<p>ここは知らないと確実に詰まる部分です。<strong>「国内の登録業者同士なら送れる」という前提は成り立ちません。</strong></p>
+
+<p>トラベルルールは、暗号資産の送付時に送付人・受取人の情報を業者間で通知する仕組みです。問題は<strong>業者ごとに採用している通知ソリューションが異なる</strong>ことで、方式が違う相手には送れません。</p>
+
+<p>GMOコインの公表内容（2026年8月4日参照）を整理すると次のとおりです。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>宛先の種類</th><th>可否</th><th>公表されている内容</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sygna Hubを利用する国内業者</td>
+      <td>送付可</td>
+      <td>同社と同じ対応ソリューションを利用する国内業者宛は送付可能とされています</td>
+    </tr>
+    <tr>
+      <td>通知対象国・地域に所在しない業者</td>
+      <td>送付可</td>
+      <td>所在地不明を含む、とされています</td>
+    </tr>
+    <tr>
+      <td>プライベートウォレット<br>（MetaMask等）</td>
+      <td>原則可</td>
+      <td>プライベートウォレットであることのみを理由に制限されることはないとしつつ、<strong>送付先に関する情報を確認し、その結果によっては送付を断る場合がある</strong>と明記されています</td>
+    </tr>
+    <tr>
+      <td>異なる方式の国内業者</td>
+      <td><strong>送付不可</strong></td>
+      <td>例として<strong>bitFlyer、コインチェック、Crypto Garage、Binance Japan</strong>が挙げられています</td>
+    </tr>
+    <tr>
+      <td>通知対象国・地域に所在する海外業者</td>
+      <td><strong>送付不可</strong></td>
+      <td>例として<strong>Kraken、Coinbase、Gate.io、OKX</strong>などが挙げられています</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p class="tablenote">※ 上記はGMOコインの公表内容の要約です。対象業者は変更され得るため、送金の前に必ず最新の公表内容をご確認ください。事業者名の例示には「2025年8月1日時点」と付されているものが含まれます。</p>
+
+<p><strong>受け取る側（預入）にも確認が入ります。</strong>同社は、他の交換業者等から送付された場合に<strong>「通知事項と送付内容の確認」</strong>を行い、<strong>「確認が完了するまで、反映にお時間がかかる場合や預入を反映できない場合がございます」</strong>としています。</p>
+
+<div class="warn">
+  <strong>Triaはウォレット側にあたります。</strong><br><br>
+  Triaは交換業者ではなくウォレットです。したがって上表の分類では<strong>プライベートウォレットに近い扱い</strong>になると考えられますが、<strong>個別の可否を当サイトが保証することはできません。</strong>当サイトはTriaから国内取引所への送金を実行しておらず、実行結果を確認していません。<br><br>
+  <strong>まとまった金額を入れる前に、少額で「出せるか」を自分で確かめてください。</strong>入口の前に出口を試すのが、この種のサービスでは合理的な順序です。
+</div>
+
+<h2 id="s4">4. 段階2：日本円に売る（販売所と取引所の差）</h2>
+
+<p>着金したら売却します。ここで見落とされやすいのが<strong>「販売所」と「取引所（板取引）」の違い</strong>です。</p>
+
+<h3>販売所は「手数料無料」でもコストがゼロではない</h3>
+
+<p>販売所は業者を相手に売買する形式で、<strong>売買手数料は無料と表示されるのが一般的です。</strong>ただし<strong>購入価格と売却価格には差（スプレッド）があり、これが実質的なコストになります。</strong>「手数料無料」という表示だけを見てコストゼロだと判断すると誤ります。</p>
+
+<p>一方、取引所（板取引）は利用者同士が板で売買する形式で、<strong>取引手数料が明示されている代わりに、スプレッドは板の状況で決まります。</strong>流動性のある銘柄なら、板取引のほうが有利になりやすい構造です。</p>
+
+<h3>GMOコインの公表手数料（2026年8月4日参照）</h3>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>項目</th><th>公表値</th><th>備考</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>販売所</td><td>売買手数料 無料</td><td>スプレッドは別途発生します</td></tr>
+    <tr><td>取引所（現物）<br>BTC・ETH・XRP・DAI</td><td class="num">Maker −0.01%<br>Taker 0.05%</td><td>Makerがマイナス＝手数料を受け取る側になります</td></tr>
+    <tr><td>取引所（現物）<br>その他銘柄</td><td class="num">Maker −0.03%<br>Taker 0.09%</td><td>—</td></tr>
+    <tr><td>暗号資産の預入</td><td>無料</td><td>送付元で手数料が発生する場合は利用者負担</td></tr>
+    <tr><td>暗号資産の送付</td><td>無料</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p class="tablenote">※ GMOコイン公式「手数料一覧」の記載（2026年8月4日参照）。手数料体系は変更され得ます。取扱銘柄は変わるため、上表の銘柄区分も申込前に最新の公表内容をご確認ください。</p>
+
+<div class="warn">
+  <strong>Makerがマイナスでも「必ず得」ではありません。</strong><br><br>
+  Maker（板に注文を並べる側）の手数料がマイナスなら手数料を受け取れますが、<strong>指値が約定しなければ売れません。</strong>価格が動いている局面では、待っている間の値下がりが手数料の差を簡単に上回ります。<strong>0.05%を惜しんで数%動く、というのは普通に起こります。</strong>急いで確実に売りたいならTakerで成行、という判断は十分に合理的です。
+</div>
+
+<h2 id="s5">5. 段階3：日本円を銀行口座へ出金する</h2>
+
+<p>売却して日本円になったら、銀行口座へ出金します。GMOコインの公表値は次のとおりです（2026年8月4日参照）。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>項目</th><th>公表値</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>日本円出金 手数料</td><td>無料</td></tr>
+    <tr><td>最低出金額</td><td class="num">10,000円 ／ 回</td></tr>
+    <tr><td>受付時間</td><td>24時間365日（メンテナンス時を除く）</td></tr>
+    <tr><td>着金までの時間</td><td>最短即時（数分程度〜）</td></tr>
+    <tr><td>大口出金（30,000,001円以上）</td><td class="num">400円 ／ 回</td></tr>
+    <tr><td>大口出金の上限</td><td class="num">100,000,000円 ／ 日</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>最低出金額10,000円は地味に効きます。</strong>クリプトカードの残高は使い切りで数千円だけ残る、ということが起こりがちです。<strong>その端数は、そのままでは引き出せません。</strong>解約前提で残高を整理するなら、最後は使い切るか、出金可能な金額まで寄せる必要があります。</p>
+
+<h3>入口側の落とし穴：Pay-easy入金後の7日間制限</h3>
+
+<p>これは出口の話ではありませんが、<strong>出口の準備段階で確実に引っかかるので先に書きます。</strong></p>
+
+<p>GMOコインの公表によれば、<strong>Pay-easy（ペイジー）で日本円を入金した場合、入金額相当の暗号資産の送付が7日間制限されます。</strong>つまり「入金してすぐ買って、すぐTriaへ送る」ができません。</p>
+
+<div class="warn">
+  <strong>入金方法で「送れるまでの時間」が変わります。</strong><br><br>
+  同社の公表では、即時入金の対応銀行（ドコモSMTBネット銀行、PayPay銀行、ゆうちょ銀行、GMOあおぞらネット銀行、楽天銀行など）からの入金は<strong>手数料無料・即時反映</strong>とされています。一方、三菱UFJ・三井住友・みずほ・りそな・埼玉りそなはPay-easy扱いで、<strong>入金自体は即時でも、その分の送付が7日間制限されます。</strong><br><br>
+  <strong>急いでチャージしたいなら、入金に使う銀行を先に選んでおく必要がある</strong>ということです。振込入金の場合、振込手数料は利用者負担とされています。
+</div>
+
+<h2 id="s6">6. 段階4：税金（一番大きいコスト）</h2>
+
+<p>ここまでの手数料は、経路を選べば<strong>ほぼゼロに近づけられます。</strong>送付無料・出金無料の業者を使い、板取引で売れば、現金として出ていくコストは僅かです。</p>
+
+<p><strong>しかし税金は経路選択では消えません。</strong></p>
+
+<h3>売却は課税イベント</h3>
+
+<p>暗号資産を売却して日本円にした時点で譲渡があったものとして扱われ、<strong>売却時の時価と取得価額の差額が所得</strong>になります。2026年8月時点では原則として<strong>雑所得・総合課税</strong>で、給与所得と合算されるため、所得税と住民税を合わせて<strong>最大約55%</strong>になり得ます。</p>
+
+<h3>決済分と売却分は「別々の」課税イベント</h3>
+
+<p>ここを混同する人が多い部分です。</p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>行為</th><th>課税イベント</th><th>計算する内容</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>カードで決済した</td><td>発生する</td><td>決済に使った暗号資産の、使用時時価 − 取得価額</td></tr>
+    <tr><td>残高を売却して日本円にした</td><td>発生する</td><td>売却した暗号資産の、売却時時価 − 取得価額</td></tr>
+    <tr><td>キャッシュバックを受け取った</td><td>論点あり</td><td>受領時の時価が所得になり得ます（取扱いに議論があります）</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p><strong>二重課税ではありません。</strong>使った分と売った分は別の資産の話なので、それぞれ独立に計算します。ただし<strong>記録は両方必要</strong>で、決済回数が多いほど作業量が増えます。</p>
+
+<div class="warn">
+  <strong>「手数料が全部無料だから出口のコストはゼロ」は誤りです。</strong><br><br>
+  送付無料・出金無料・取引手数料0.05%の経路を選んでも、<strong>含み益が乗っていれば売却時に課税されます。</strong>逆に含み損なら所得は出ませんが、雑所得内の相殺には制約があります。<br><br>
+  <strong>出口のコストは「手数料 ＋ 税金」で見てください。</strong>そして多くの場合、後者のほうが桁が大きくなります。
+</div>
+
+<p>課税関係の詳細、20万円ルールが誰に使えるのか、損益計算の実務手順は、税務ページにまとめてあります。</p>
+
+<p><strong>→ <a href="/#s2">Triaを1回使うと課税イベントは何回起きるのか</a>／<a href="/#s6">損益計算の実務手順（20万円ルールの適用条件を含む）</a></strong></p>
+
+<h2 id="s7">7. では入口はどうするか：口座の選び方</h2>
+
+<p>ここまでの整理から、<strong>出口の観点で見るべき条件が3つに絞れます。</strong></p>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>確認する条件</th><th>なぜ効くのか</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>日本円の出金手数料</td><td>出口で必ず1回は通る。有料なら現金化のたびに引かれます</td></tr>
+    <tr><td>暗号資産の送付手数料</td><td>入口でも出口でも通る。送付手数料が固定額の業者は、少額の送金ほど不利になります</td></tr>
+    <tr><td>対応チェーンと取扱銘柄</td><td><strong>ここが合わないと、そもそも送れません。</strong>手数料以前の問題です</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>還元キャンペーンや取扱銘柄数は目に入りやすい一方、<strong>実際に負担する金額に効くのは上の3点です。</strong></p>
+
+<h3>GMOコインの公表スペック（2026年8月4日参照）</h3>
+
+<div class="tablewrap">
+<table>
+  <thead>
+    <tr><th>項目</th><th>公表値</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>口座開設手数料</td><td>無料</td></tr>
+    <tr><td>口座開設の所要時間</td><td>「かんたん本人確認」利用時、最短10分で取引開始（9:00〜24:00の申込完了分。郵送物の受取不要）</td></tr>
+    <tr><td>即時入金（日本円）</td><td>無料</td></tr>
+    <tr><td>振込入金（日本円）</td><td>振込手数料は利用者負担</td></tr>
+    <tr><td>日本円出金</td><td>無料（最低10,000円/回。3,000万円超の大口は400円）</td></tr>
+    <tr><td>暗号資産の預入</td><td>無料</td></tr>
+    <tr><td><strong>暗号資産の送付</strong></td><td><strong>無料</strong></td></tr>
+    <tr><td>販売所</td><td>売買手数料無料（スプレッドは別途）</td></tr>
+    <tr><td>取引所（現物）</td><td>Maker −0.01%／Taker 0.05%（BTC・ETH・XRP・DAI）<br>その他は Maker −0.03%／Taker 0.09%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3>不利な点・注意点も同じ密度で</h3>
+
+<ul>
+  <li><strong>販売所のスプレッドは公表されていません。</strong>「販売所の手数料は無料」という表示だけで実質コストを判断できません。金額が大きいときは取引所（板）を使うかどうかで差が出ます</li>
+  <li><strong>トラベルルールで送付できない相手があります。</strong>bitFlyer、コインチェック、Crypto Garage、Binance Japanといった国内業者宛には送付できないと公表されています。<strong>複数の国内取引所を併用している人は、想定している資金移動が実際にできるか事前に確認してください</strong></li>
+  <li><strong>Pay-easy入金は、入金額相当の送付が7日間制限されます。</strong>三菱UFJ・三井住友・みずほ・りそな系はこの扱いです</li>
+  <li><strong>取扱銘柄と対応ネットワークは変わります。</strong>Tria側が受け取れる／送れるチェーンと突き合わせる作業は、利用者自身が申込前に行う必要があります</li>
+  <li><strong>ネットワークの誤りは取り返しがつかない場合があります。</strong>ERC-20規格の資産を別ネットワークで預入すると喪失のおそれがある旨が公式に告知されています</li>
+</ul>
+
+<div class="warn">
+  <strong>繰り返しますが、当サイトはこの口座を開設して計測していません。</strong><br><br>
+  上表は<strong>公式サイトの公表値の転記</strong>です。所要時間や着金日数を「実際に測った」とは書きません。<strong>公表値は変更され得るため、申込前に必ず公式サイトの最新表示をご確認ください。</strong>
+</div>
+
+<!-- ===== A8_GMO_LINK ここから =====
+     A8のGMOコイン案件が承認されたら、下の <a> の href をA8の発行リンクに差し替える。
+     差し替え時のチェック:
+       1. rel="sponsored nofollow noopener" になっているか（現状すでにsponsored付き）
+       2. 冒頭のPR表記が「暗号資産交換業者およびTriaの紹介リンク」を含んでいるか（含んでいる）
+       3. A8の掲載メディア登録に本サイト(cryptotaxlab-design.github.io)が入っているか
+     未承認の現状では公式サイトへの通常リンク（報酬なし）を貼っている。
+     ===== -->
+<div class="cta">
+  <p style="margin:0 0 4px"><strong>GMOコイン（GMOコイン株式会社／暗号資産交換業者 関東財務局長 第00006号）</strong></p>
+  <p style="margin:8px 0 0"><small>暗号資産の送付手数料・日本円の出金手数料がいずれも無料と公表されており、出口側の現金コストを抑えやすい構成です。ただし上記の注意点を必ず確認してください。</small></p>
+  <a class="btn" href="https://coin.z.com/jp/" rel="sponsored nofollow noopener" target="_blank">GMOコイン公式サイトで最新の手数料を確認する</a>
+  <small>
+    リンク先は公式サイトです。当サイトはアフィリエイトプログラムに参加しており、経由した口座開設により報酬が発生する場合があります。<br>
+    <strong>登録前に、本ページの「不利な点・注意点」と税務セクションを必ずお読みください。</strong>
+  </small>
+</div>
+<!-- ===== A8_GMO_LINK ここまで ===== -->
+
+<h2 id="s8">8. 出口まで含めて、結局得なのか</h2>
+
+<p>出口の手順が分かったところで、そもそもの損得に戻ります。<strong>クリプトカードは、還元率だけ見ると魅力的に見えますが、税・年会費・実効手数料を引くと結論が変わります。</strong></p>
+
+<p>当サイトの試算では、<strong>黒字になるのは「一定額以上」ではなく「一定の範囲内」だけ</strong>です。下限を下回れば年会費を回収できず、上限（月額の還元上限）を超えれば還元率がフロアまで落ちる一方で手数料は全額にかかるため、<strong>使いすぎると再び赤字になります。</strong></p>
+
+<div class="warn">
+  <strong>年間利用額と課税所得を入れると、手取りをその場で計算できます。</strong><br>
+  当サイトが実測した実効手数料1.444%、年会費、雑所得課税をすべて差し引いた金額が出ます。<br><br>
+  <strong>→ <a href="/tria-break-even/">Triaカードは元が取れるのか？年間利用額から損益分岐を計算する</a></strong><br>
+  <strong>→ <a href="/">Triaカードの税金は結局いくら？2026年8月時点の正確な答えと手数料実測</a></strong>
+</div>
+
+<h3>それでも条件が合う人へ</h3>
+
+<p>試算の範囲に入る人、すでに暗号資産を保有していて国内取引所での売却を経ずに使いたい人、海外利用が多い人には合理性があります。<strong>ただし、上の2ページで自分の数字を確認してからにしてください。</strong></p>
+
+<div class="cta">
+  <p style="margin:0 0 4px"><strong>Triaのアクセスコード</strong></p>
+  <span class="code">OC8SX94740</span>
+  <p style="margin:4px 0 0"><small>登録時に必要です。下のリンクからだと自動入力されます。</small></p>
+  <a class="btn" href="https://app.tria.so/?accessCode=OC8SX94740" rel="nofollow sponsored noopener" target="_blank">Triaに登録する（コード自動入力）</a>
+  <small>
+    このリンク経由の登録により、当サイト運営者に紹介報酬が発生します。<br>
+    <strong>本ページの出口セクションと、税務ページの試算を読んだうえでご判断ください。</strong>
+  </small>
+</div>
+
+<h2 id="faq">よくある質問</h2>
+
+<details>
+<summary>Triaの残高を直接、日本円で銀行口座に出金できますか？</summary>
+<p><strong>できません。</strong>Triaは日本円での直接チャージに対応しておらず、逆方向、つまり残高を日本円として国内の銀行口座へ引き出す機能もありません。現金化するには、Tria残高を暗号資産として国内の暗号資産交換業者へ送付し、そこで日本円に売却し、日本円を銀行口座へ出金する、という3段階が必要です。したがって<strong>カードを作る前に、出口となる国内取引所の口座を先に用意しておくのが正しい順番</strong>になります。</p>
+</details>
+
+<details>
+<summary>クリプトカードの残高を現金化するのに、いくらかかりますか？</summary>
+<p><strong>現金として出ていくコストと、税金として出ていくコストを分けて考える必要があります。</strong>現金コストは、送金時のネットワーク手数料、売却時のスプレッドまたは取引手数料、日本円の出金手数料の3つです。GMOコインの公表値では暗号資産の送付手数料と日本円の出金手数料はいずれも無料、取引所（現物）の取引手数料はBTC・ETH・XRP・DAIでMaker−0.01%／Taker0.05%、その他銘柄でMaker−0.03%／Taker0.09%とされています（2026年8月4日参照）。一方で販売所を使う場合は、取引手数料が無料と表示されていても<strong>スプレッドが実質的なコスト</strong>になります。<strong>そして最も大きいのは税金です。</strong>暗号資産を売却した時点で譲渡があったものとして扱われ、原則として雑所得・総合課税になります。手数料をすべて無料にしても、税負担は残ります。</p>
+</details>
+
+<details>
+<summary>どの国内取引所を選んでも同じですか？</summary>
+<p>出口の観点では<strong>3点だけ</strong>確認すれば足ります。第一に<strong>日本円の出金手数料</strong>が無料かどうか。第二に<strong>暗号資産の送付（出庫）手数料</strong>が無料かどうか。第三に<strong>自分が送りたい銘柄とチェーンに対応しているか</strong>です。還元キャンペーンや取扱銘柄数よりも、この3点のほうが実際に負担する金額に直結します。加えて、トラベルルールへの対応方式が業者ごとに異なるため、<strong>送付できる相手が業者によって違う</strong>点も確認が必要です。</p>
+</details>
+
+<details>
+<summary>トラベルルールで送金できないことがあるというのは本当ですか？</summary>
+<p><strong>本当です。</strong>GMOコインの公表によれば、同社と異なるトラベルルール対応ソリューションを採用している国内の暗号資産交換業者には送付できないとされ、例として<strong>bitFlyer、コインチェック、Crypto Garage、Binance Japan</strong>が挙げられています。また通知対象国・地域に所在する海外業者、例としてKraken、Coinbase、Gate.io、OKXなども送付できない先とされています。MetaMask等のプライベートウォレットへの送付は可能とされていますが、<strong>送付先に関する情報の確認結果によっては送付を断る場合がある</strong>とも明記されています。逆方向、つまり外部から預け入れる場合も、送付元からの通知事項と送付内容の確認が行われ、<strong>確認が完了するまで反映に時間がかかる場合や、反映できない場合がある</strong>とされています。<strong>「国内の登録業者同士なら必ず送れる」という前提は成り立ちません。</strong></p>
+</details>
+
+<details>
+<summary>売却して日本円に戻すとき、税金はどうなりますか？</summary>
+<p>暗号資産の売却は<strong>課税イベント</strong>であり、売却時の時価と取得価額の差額が所得になります。2026年8月時点では原則として雑所得・総合課税で、給与所得と合算されるため所得税と住民税を合わせて最大約55%になり得ます。注意すべきなのは、<strong>カードで決済した時点でも既に課税イベントが発生している</strong>点です。決済で使った分と、売却して日本円に戻した分は、それぞれ<strong>別の課税イベント</strong>として計算します。二重課税ではなく、別々の取引として両方を記録する必要がある、ということです。詳細は<a href="/#s2">税務ページのセクション2</a>にまとめています。</p>
+</details>
+
+<details>
+<summary>日本円の出金に最低金額はありますか？</summary>
+<p>GMOコインの公表では、日本円出金の最低金額は<strong>10,000円／回</strong>とされています。受付は24時間365日、手数料は無料、着金は最短即時とされています。30,000,001円以上の大口出金は手数料400円で、上限は100,000,000円／日です（いずれも2026年8月4日参照）。<strong>少額の残高を細かく引き出す用途には向きません。</strong>カードの残高が数千円だけ残った場合、そのままでは出金できない点に注意してください。</p>
+</details>
+
+<details>
+<summary>ネットワークを間違えて送るとどうなりますか？</summary>
+<p><strong>資産を失うおそれがあります。</strong>GMOコインは公式告知で、イーサリアムおよびERC-20規格の暗号資産を「Ethereum（ERC-20）」以外のネットワークで預入すると、<strong>取り出しができなくなり喪失してしまうおそれがある</strong>と明記しています。暗号資産の送付・預入は各銘柄が本来対応するチェーンで行う必要があり、送金元と送金先の双方で同じネットワークを選んでいるかを送金前に必ず確認してください。<strong>まず最小額でテスト送金し、着金を確認してから本番の金額を送るのが安全です。</strong></p>
+</details>
+
+<details>
+<summary>入金してすぐ暗号資産を送れますか？</summary>
+<p><strong>入金方法によります。</strong>GMOコインの公表によれば、Pay-easy（ペイジー）で入金した場合、<strong>入金額相当の暗号資産の送付が7日間制限されます。</strong>三菱UFJ銀行・三井住友銀行・みずほ銀行・りそな銀行・埼玉りそな銀行はPay-easy扱いです。一方、ドコモSMTBネット銀行・PayPay銀行・ゆうちょ銀行・GMOあおぞらネット銀行・楽天銀行などからの即時入金は手数料無料・即時反映とされています。<strong>急いでチャージしたい場合は、入金に使う銀行を先に決めておく必要があります。</strong></p>
+</details>
+
+<details>
+<summary>このページの情報は実際に試した結果ですか？</summary>
+<p><strong>いいえ。</strong>このページは各社が公表している情報を、出典と参照時点を明記して整理したものです。<strong>当サイトが実際に口座を開設して所要時間や手数料を計測したものではありません。</strong>当サイトが自分で計測した数値は<a href="/#s4">Triaカードの決済手数料に関するページ</a>に分けて掲載しており、そちらには実測である旨を明記しています。公表値は変更され得るため、手続きの前に必ず各社の最新表示をご確認ください。</p>
+</details>
+
+<h2 id="sources">出典一覧</h2>
+
+<ol class="sources">
+  <li>GMOコイン「手数料一覧」— 口座開設・入出金・販売所・取引所（現物）の各手数料<br><a href="https://coin.z.com/jp/corp/guide/fees/" rel="nofollow noopener" target="_blank">https://coin.z.com/jp/corp/guide/fees/</a>（2026年8月4日参照）</li>
+  <li>GMOコイン「入出金・振替（日本円・暗号資産）」— 即時入金の対応銀行、日本円出金の最低額・所要時間、Pay-easy入金後の7日間の送付制限<br><a href="https://coin.z.com/jp/corp/guide/deposit-withdrawal/" rel="nofollow noopener" target="_blank">https://coin.z.com/jp/corp/guide/deposit-withdrawal/</a>（2026年8月4日参照）</li>
+  <li>GMOコイン「トラベルルールについて」— 送付可能／不可能な宛先、プライベートウォレットの扱い、預入時の確認<br><a href="https://coin.z.com/jp/corp/travelrule/" rel="nofollow noopener" target="_blank">https://coin.z.com/jp/corp/travelrule/</a>（2026年8月4日参照）</li>
+  <li>GMOコイン「口座開設のご案内（24時間いつでも最短10分でお取引開始）」— かんたん本人確認と所要時間<br><a href="https://coin.z.com/jp/corp/guide/flow/" rel="nofollow noopener" target="_blank">https://coin.z.com/jp/corp/guide/flow/</a>（2026年8月4日参照）</li>
+  <li>GMOコイン「【重要】イーサリアム（ETH）およびERC-20規格の暗号資産を当社へ預入する際のご注意事項」（2023年7月14日付告知）— ネットワーク誤りによる喪失のおそれ<br><a href="https://coin.z.com/jp/news/2023/07/11291/" rel="nofollow noopener" target="_blank">https://coin.z.com/jp/news/2023/07/11291/</a>（2026年8月4日参照）</li>
+  <li>GMOコインサポート「暗号資産の送付・預入時のプラットフォーム（チェーン、ネットワーク）について教えてください」— 銘柄ごとの対応ネットワーク<br><a href="https://support.coin.z.com/hc/ja/articles/4408517936281" rel="nofollow noopener" target="_blank">https://support.coin.z.com/hc/ja/articles/4408517936281</a>（2026年8月4日参照）</li>
+  <li>国税庁「暗号資産等に関する税務上の取扱い及び計算書について」— 暗号資産の売却・使用に係る所得区分<br><a href="https://www.nta.go.jp/publication/pamph/shotoku/kakuteishinkokukankei/kasoutuka/" rel="noopener" target="_blank">https://www.nta.go.jp/publication/pamph/shotoku/kakuteishinkokukankei/kasoutuka/</a>（2026年8月4日参照）</li>
+  <li>Tria 公式サイト<br><a href="https://tria.so/" rel="nofollow noopener" target="_blank">https://tria.so/</a>（2026年8月4日参照）</li>
+</ol>
+
+<p class="src">※ 本ページに掲載した数値は、いずれも上記出典の公表値を転記したものであり、当サイトが実測したものではありません。当サイトの実測値は<a href="/#s4">こちら</a>に分けて掲載しています。</p>
+
+<div class="disclaimer">
+  <strong>免責事項</strong><br>
+  本記事は執筆時点で公開されている情報をもとにした<strong>一般的な情報提供</strong>であり、税務・法務・投資に関する助言ではありません。税務上の取扱いは個々の事情により異なり、また法令改正により変わります。実際の申告にあたっては必ず税理士等の専門家にご相談ください。<br><br>
+  手数料・所要時間・トラベルルールの対応状況・取扱銘柄・対応ネットワークは、<strong>いずれも変更され得ます。</strong>本記事の記載は各社の公表内容を参照時点で整理したものであり、その後の変更を反映していない可能性があります。<strong>手続きの前に必ず各社の最新の公表内容をご確認ください。</strong><br><br>
+  本記事は特定の暗号資産・サービスの購入や利用を推奨するものではありません。暗号資産は価格変動により<strong>元本を割り込む可能性</strong>があります。送金の可否や着金の成否について当サイトは一切の保証を行いません。<br><br>
+  本記事には紹介リンクが含まれ、経由した登録により運営者が報酬を受け取る場合があります。記載内容の正確性には努めていますが、その完全性を保証するものではなく、本記事に基づく判断により生じたいかなる損害についても責任を負いかねます。
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>クリプトカード税務ラボ｜最終更新 2026年8月4日</p>
+    <p>本サイトはアフィリエイトプログラムに参加しており、紹介リンク経由の登録により報酬を受け取ります。</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, k='theme';
+  try{ var s=localStorage.getItem(k); if(s) root.setAttribute('data-theme',s); }catch(e){}
+  var b=document.getElementById('tt');
+  if(b){ b.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){ cur = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark':'light'; }
+    var next = cur==='dark' ? 'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{ localStorage.setItem(k,next); }catch(e){}
+  }); }
+})();
+</script>
+
+</body>
+</html>
