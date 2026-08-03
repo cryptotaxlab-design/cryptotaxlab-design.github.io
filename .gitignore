@@ -1,5 +1,14 @@
-# デプロイ用スクリプトは公開サイトに配信しない
+# 運用スクリプトは公開サイトに配信しない
 deploy.sh
+indexnow.sh
+
+# note用の原稿は公開サイトに置かない
+# （note.com と同一内容が自ドメインにも存在すると重複コンテンツになり、
+#   権威の高い note 側が優先されて自サイトが評価を落とすため）
+note_*_paste.html
+note_*_draft.md
+
+# ただし IndexNow の鍵ファイル（*.txt）は公開が必須なので除外しない
 
 # macOS
 .DS_Store
