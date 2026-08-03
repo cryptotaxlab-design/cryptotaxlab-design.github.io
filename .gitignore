@@ -12,3 +12,6 @@ note_*_draft.md
 
 # macOS
 .DS_Store
+
+# Gist用の原稿は公開サイトに置かない（重複コンテンツ回避）
+gist/
